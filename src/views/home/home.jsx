@@ -16,7 +16,6 @@ export const Home = () => {
       <KataSambutan />
       <BidangEksekutif />
       <UnitKegiatan />
-      <Grid array={arrayKoor.koorHumas} />
     </HelmetProvider>
   );
 };

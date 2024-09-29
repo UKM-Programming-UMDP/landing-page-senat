@@ -44,7 +44,7 @@ export const BadanKepengurusan = () => {
             className="w-2/5 transform scale-x-[-1]"
           />
         </div>
-        <div className="flex md:flex-row flex-col items-center text-center p-6 bg-blue-950 text-white">
+        <div className="flex md:flex-row flex-col items-center justify-center text-center p-6 bg-blue-950 text-white">
           <div className="flex flex-col items-center">
             <img
               src={arrayKepengurusan.bendahara.image}
