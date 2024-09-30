@@ -24,7 +24,8 @@ export const Jumbotron = () => {
             <a
               className="btn w-full rounded-full text-white p-3"
               style={{ backgroundColor: "#1f4287" }}
-              href="/form-aspirasi"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfgIcdM-wJ9MLHXz6x4cyQyxvnhcUSrk6v3p4awjuxj4a86pw/viewform"
+              target="_blank"
             >
               Form Aspirasi
             </a>
