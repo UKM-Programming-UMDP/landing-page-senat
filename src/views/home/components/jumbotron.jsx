@@ -5,13 +5,19 @@ export const Jumbotron = () => {
     <div
       className="jumbotron text-white bg-cover bg-center lg:ps-10 lg:pe-10 ps-4 pe-4"
       style={{ backgroundImage: `url(${jumbotron})` }}
+      data-aos="zoom-out"
+      data-aos-duration="500"
     >
       <div
         className="flex items-center px-5 w-full"
         style={{ height: "120vh" }}
       >
-        <div className="jumbotron-text ">
-          <h1 className="mb-10 text-4xl font-extrabold w-full text-center md:text-5xl lg:text-6xl lg:text-left text-white text-4xl lg:text-6xl font-bold">
+        <div
+          className="jumbotron-text lg:w-1/2"
+          data-aos="zoom-in"
+          data-aos-duration="700"
+        >
+          <h1 className="mb-10 text-4xl font-extrabold w-full text-center md:text-5xl lg:text-left text-white  lg:text-6xl">
             SENAT MAHASISWA UNIVERSITAS MDP
           </h1>
           <p className="mt-4 text-lg lg:w-4/6 lg:text-xl mb-10 text-justify">
