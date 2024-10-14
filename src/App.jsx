@@ -10,6 +10,7 @@ import { Sosmed } from "./views/contact/medsos/medsos";
 import { FormAspirasi } from "./views/contact/formAspirasi/formAspirasi";
 
 function App() {
+  AOS.init();
   return (
     <BrowserRouter>
       <Routes>
@@ -23,9 +24,6 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-  // useEffect(() => {
-  //   AOS.init({ duration: 1000, once: true }); // Inisialisasi AOS
-  // }, []);
 }
 
 export default App;

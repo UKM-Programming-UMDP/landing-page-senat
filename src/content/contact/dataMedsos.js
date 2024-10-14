@@ -1,9 +1,8 @@
 import instagram from "@assets/instagram-icon.png";
 import email from "@assets/gmail_icon.png";
-import whatsapp from "@assets/whatsapp-icon.png";
 import tiktok from "@assets/icon-tiktok.png";
 
-export const arrayMedsos = [
+export const dataMedsos = [
   {
     icon: instagram,
     name: "@senatmahasiswamdp",

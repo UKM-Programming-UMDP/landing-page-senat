@@ -3,7 +3,7 @@ import sosial from "@assets/Sosial.png";
 import psdm from "@assets/psdm.png";
 import multimedia from "@assets/multimedia.png";
 
-export const arrayEksekutif = [
+export const dataEksekutif = [
   {
     icon: humas,
     name: "Humas",

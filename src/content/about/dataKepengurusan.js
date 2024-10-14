@@ -6,12 +6,12 @@ import koorhumas from "@assets/logo-kabinet.png";
 import koorsosial from "@assets/pemimpin-hebat.png";
 import koorpsdm from "@assets/pemimpin-hebat.png";
 import koormulmed from "@assets/pemimpin-hebat.png";
-import { anggotaKoordinator } from "./arrayAnggotaKoordinator";
+import { anggotaKoordinator } from "./dataAnggotaKoordinator";
 
 const { anggotaHumas, anggotaPsdm, anggotaSosial, anggotaMulmed } =
   anggotaKoordinator();
 
-export const arrayKepengurusan = {
+export const dataKepengurusan = {
   ketua: {
     name: "M. Roihan Jannatun Adhen",
     image: ketua,
@@ -35,7 +35,7 @@ export const arrayKepengurusan = {
   },
 };
 
-export const arrayKoor = {
+export const dataKoor = {
   koorHumas: {
     divisi: "Hubungan Masyarakat",
     name: "M. Rezki Arranga",

@@ -1,18 +1,17 @@
 import fotoSenat from "@assets/pemimpin-hebat.png";
-import ukm from "@assets/kaka-cakep.png";
 
 export const KataSambutan = () => {
   return (
     <div className="lg:pe-10 lg:ps-10 pe-3 ps-3 mb-10">
       <div className="mt-3 mb-5 flex flex-col lg:flex-row justify-center gap-5 items-center opening">
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2" data-aos="fade-right" data-aos-duration="500">
           <img src={fotoSenat} alt="" className="w-full" />
         </div>
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2" data-aos="fade-left" data-aos-duration="700">
           <h3 className="text-2xl font-bold title-text">
             Kata Sambutan Ketua Senat 2024-2025
           </h3>
-          <p className="text-justify mt-3 ">
+          <p className="text-justify mt-3">
             Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus
             lectus netus nibh; eros nulla egestas hac. Nam nunc inceptos conubia
             dui torquent urna cubilia nulla. Aenean fusce finibus eu dis

@@ -21,7 +21,6 @@ export const anggotaKoordinator = () => {
     { name: "Hera Margareta", image: anggotahumas2, divisi: "humas" },
     { name: "Callista Virginia", image: anggotahumas3, divisi: "humas" },
     { name: "Johan Indra Saputra", image: anggotahumas4, divisi: "humas" },
-    //{ name: "Johan Indra Saputra", image: anggotahumas4, divisi: "humas" },
   ];
 
   const anggotaPsdm = [
@@ -42,7 +41,7 @@ export const anggotaKoordinator = () => {
     { name: "Muhammad Alif Fahlevi", image: anggotamulmed1, divisi: "mulmed" },
     {
       name: "William Efrans Oktayandi",
-      fotimageo: anggotamulmed2,
+      image: anggotamulmed2,
       divisi: "mulmed",
     },
     { name: "Jhennifer Nieta Tasmin", image: anggotamulmed3, divisi: "mulmed" },
