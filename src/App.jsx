@@ -3,9 +3,9 @@ import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Layout } from "./templates/layout";
-import { Home } from "./views/home/home";
+import { Home } from "./views/home";
 import { ErrorPage } from "./views/ErorrPage";
-import { About } from "./views/about/about";
+import { About } from "./views/about";
 import { Sosmed } from "./views/contact/medsos/medsos";
 import { FormAspirasi } from "./views/contact/formAspirasi/formAspirasi";
 

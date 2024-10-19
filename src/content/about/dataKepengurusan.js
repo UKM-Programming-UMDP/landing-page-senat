@@ -2,10 +2,10 @@ import ketua from "@assets/pemimpin-hebat.png";
 import wakil from "@assets/pemimpin-hebat.png";
 import sekretaris from "@assets/pemimpin-hebat.png";
 import bendahara from "@assets/pemimpin-hebat.png";
-import koorhumas from "@assets/logo-kabinet.png";
-import koorsosial from "@assets/pemimpin-hebat.png";
-import koorpsdm from "@assets/pemimpin-hebat.png";
-import koormulmed from "@assets/pemimpin-hebat.png";
+import koorhumas from "@assets/fotoTester4.jpg";
+import koorsosial from "@assets/fotoTester2.jpg";
+import koorpsdm from "@assets/fotoTester3.jpeg";
+import koormulmed from "@assets/fotoTester1.jpg";
 import { anggotaKoordinator } from "./dataAnggotaKoordinator";
 
 const { anggotaHumas, anggotaPsdm, anggotaSosial, anggotaMulmed } =
@@ -16,7 +16,7 @@ export const dataKepengurusan = {
     name: "M. Roihan Jannatun Adhen",
     image: ketua,
     descriptions:
-      '" Saya tidak takut pada orang yang berlatih sekali untuk 10.000 tendangan, tapi saya takut pada orang yang berlatih satu tendangan sebanyak 10.000 kali. "',
+      '" Pemimpin yang baik menerima sedikit lebih banyak dari bagiannya untuk disalahkan, sedikit lebih sedikit dari bagiannya untuk dipuji." - Arnold H. Glasow quoteny',
   },
   wakil: {
     name: "Mario Rivaldo",

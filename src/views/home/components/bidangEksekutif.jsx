@@ -15,8 +15,8 @@ export const BidangEksekutif = () => {
         </h1>
       </div>
 
-      <div className="flex flex-col lg:flex-row mt-3 mb-3 justify-center items-center">
-        <div className="flex flex-wrap justify-center items-center gap-4 lg:w-1/2 mt-4 mb-4">
+      <div className="flex flex-col min-[1300px]:flex-row mt-3 mb-3 justify-center items-center">
+        <div className="flex flex-wrap justify-center items-center gap-4 min-[1300px]:w-1/2 mt-4 mb-4">
           {dataEksekutif.map((item, index) => (
             <div
               key={index}
@@ -24,7 +24,7 @@ export const BidangEksekutif = () => {
                 index % 3 === 0
                   ? "bg-dark-blue text-white lg:bg-dark-blue lg:text-white"
                   : "text-black"
-              } border-bidang-eksekutif p-4 shadow-lg w-full lg:w-64`}
+              } border-bidang-eksekutif p-4 shadow-lg w-full min-[1300px]:w-64`}
               data-aos="zoom-in"
               data-aos-duration={duration(index)}
             >

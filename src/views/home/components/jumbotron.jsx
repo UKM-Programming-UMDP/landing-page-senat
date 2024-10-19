@@ -1,32 +1,26 @@
 import jumbotron from "@assets/Jumbotron.png";
+import orang from "@assets/jumbotron-orang.png";
 
 export const Jumbotron = () => {
   return (
     <div
-      className="jumbotron text-white bg-cover bg-center lg:ps-10 lg:pe-10 ps-4 pe-4"
-      style={{ backgroundImage: `url(${jumbotron})` }}
+      className="jumbotron border-none text-white bg-dark-blue bg-cover bg-center lg:px-5 lg:pt-16 pt-28 h-max overflow-hidden relative"
       data-aos="zoom-out"
       data-aos-duration="500"
+      // style={{ height: "120vh" }}
     >
-      <div
-        className="flex items-center px-5 w-full"
-        style={{ height: "120vh" }}
-      >
-        <div
-          className="jumbotron-text lg:w-1/2"
-          data-aos="zoom-in"
-          data-aos-duration="700"
-        >
-          <h1 className="mb-10 text-4xl font-extrabold w-full text-center md:text-5xl lg:text-left text-white  lg:text-6xl">
+      <div className="flex gap-2 ps-10 pe-10 items-center lg:pt-28">
+        <div className="jumbotron-text lg:w-3/5 flex flex-col gap-8">
+          <h1 className="text-4xl font-extrabold w-full text-center md:text-5xl lg:text-left text-white lg:text-6xl">
             SENAT MAHASISWA UNIVERSITAS MDP
           </h1>
-          <p className="mt-4 text-lg lg:w-4/6 lg:text-xl mb-10 text-justify">
+          <p className="text-lg lg:text-xl text-justify">
             Senat Mahasiswa Universitas MDP merupakan suatu organisasi mahasiswa
             yang menaungi Unit Kegiatan Mahasiswa (UKM) yang ada di lingkungan
             Universitas MDP.
           </p>
 
-          <div className="lg:w-1/4 w-40 mt-4 mb-3 mx-auto lg:mx-0">
+          <div className="lg:w-1/4 w-40 mx-auto lg:mx-0">
             <a
               className="btn w-full rounded-full text-white p-3"
               style={{ backgroundColor: "#1f4287" }}
@@ -37,8 +31,33 @@ export const Jumbotron = () => {
             </a>
           </div>
         </div>
-        <div className="hidden lg:block lg:w-1/2 object-image"></div>
+        <div
+          className="hidden lg:block lg:w-3/5 sm:w-2/5"
+          style={{ zIndex: -1 }}
+          // data-aos="zoom-out"
+          // data-aos-duration="500"
+        >
+          <img
+            src={orang}
+            alt=""
+            className="absolute lg:w-1/2 w-2/5 lg:top-36 lg:right-2"
+          />
+        </div>
       </div>
+      <div className="h-96"></div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+        className="absolute bottom-0 left-0 w-full"
+        style={{ bottom: "-10px" }}
+      >
+        <path
+          fill="#ffff"
+          fillOpacity="1"
+          d="M0,160L60,181.3C120,203,240,245,360,234.7C480,224,600,160,720,149.3C840,139,960,181,1080,197.3C1200,213,1320,203,1380,197.3L1440,192L1440,320L0,320Z"
+        ></path>
+      </svg>
     </div>
   );
 };
