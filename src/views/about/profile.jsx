@@ -22,7 +22,7 @@ export const Profile = () => {
             data-aos="zoom-in"
             data-aos-duration="800"
           >
-            <p className="text-base sm:text-lg md:text-2xl text-white mb-8 leading-relaxed sm:leading-[2.5rem] md:leading-[3rem]">
+            <p className="text-base sm:text-lg md:text-2xl text-white mb-8 leading-relaxed sm:leading-[2.5rem] md:leading-[3rem] text-justify">
               Senat Mahasiswa UMDP adalah sebuah organisasi tertinggi sekaligus
               memiliki otoritas tertinggi di ormawa di universitas multi data
               palembang selayaknya (BEM) namun yang berperan sebagai lembaga

@@ -6,7 +6,7 @@ export const Grid = ({ array, ketuaPosition }) => {
 
   const ketuaComponent = (array) => (
     <div
-      className="md:w-1/2 w-full rounded-3xl row-span-3 bg-black/80 text-center text-2xl font-semibold bg-cover bg-center flex items-center justify-center"
+      className="p-3 md:w-1/2 w-full rounded-3xl row-span-3 bg-dark-blue border-dark-blue border-8 text-center text-2xl font-semibold bg-cover bg-center flex items-end justify-center"
       style={{
         backgroundImage: `url(${array.image})`,
         aspectRatio: "1 / 1",
@@ -14,7 +14,14 @@ export const Grid = ({ array, ketuaPosition }) => {
       data-aos="fade-up"
       data-aos-duration="600"
     >
-      <span className="md:text-3xl text-4xl">{array.name}</span>
+      <span
+        className="md:text-3xl text-4xl"
+        style={{
+          WebkitTextStroke: "0.8px #000",
+        }}
+      >
+        {array.name}
+      </span>
     </div>
   );
 
@@ -27,22 +34,29 @@ export const Grid = ({ array, ketuaPosition }) => {
       {array?.anggota.map((anggota, idx) => (
         <div
           key={idx}
-          className={`rounded-3xl bg-black/80 bg-cover text-center text-xl font-semibold flex items-center justify-center`}
+          className={`p-1 rounded-3xl bg-dark-blue border-4 bg-cover text-center border-dark-blue text-xl font-semibold flex items-end justify-center`}
           style={{
             backgroundImage: `url(${anggota?.image})`,
             aspectRatio: "1 / 1",
           }}
         >
-          <span className="md:text-2xl text-lg">{anggota?.name}</span>
+          <span
+            className="md:text-2xl text-l"
+            style={{
+              WebkitTextStroke: "0.8px #000",
+            }}
+          >
+            {anggota?.name}
+          </span>
         </div>
       ))}
     </div>
   );
 
   return (
-    <div className="gap-3 text-white">
+    <div className="gap-3 text-white px-4">
       <div
-        className={`rounded-3xl col-span-2 bg-black/80 text-center py-5 text-2xl font-semibold bg-cover bg-center flex items-center justify-center`}
+        className="rounded-3xl col-span-2 bg-dark-blue text-center py-5 text-2xl font-semibold bg-cover bg-center flex items-center justify-center"
         data-aos="flip-up"
         data-aos-duration="500"
       >
