@@ -1,30 +1,25 @@
-import { arrayKepengurusan } from "@content/about/arrayKepengurusan";
-import ketua from "@assets/pemimpin-hebat.png";
+import { dataKoor } from "@content/about/dataKepengurusan";
 import { Grid } from "@components/grid/grid";
-import { arrayKoor } from "../../content/about/arrayKepengurusan";
-import { Grid2 } from "../../components/grid/grid2";
 
 export const Koordinator = () => {
   return (
-    <>
-      <section
-        id="koordinator"
-        className="overflow-hidden text-center lg:px-20 px-2"
+    <section
+      id="koordinator"
+      className="overflow-hidden text-center lg:px-20 px-2"
+    >
+      <h1
+        className="text-5xl mb-6 font-bold"
+        data-aos="zoom-in"
+        data-aos-duration="500"
       >
-        <h1 className="text-5xl mb-6 font-bold">KOORDINATOR</h1>
-
-        {/* <Grid
-          classKoor="col-span-4 row-span-2"
-          classAnggota="col-span-1 row-span-1"
-          array={arrayKoor.koorHumas}
-        /> */}
-        <div className="overflow-hidden grid gap-y-32">
-          <Grid2 array={arrayKoor.koorPsdm} />
-          <Grid2 array={arrayKoor.koorSosial} />
-          <Grid2 array={arrayKoor.koorMulmed} />
-          <Grid2 array={arrayKoor.koorHumas} />
-        </div>
-      </section>
-    </>
+        KOORDINATOR
+      </h1>
+      <div className="overflow-hidden grid gap-y-32 w-full max-w-screen-lg mx-auto sm:px-12">
+        <Grid array={dataKoor.koorPsdm} ketuaPosition="left" />
+        <Grid array={dataKoor.koorSosial}  />
+        <Grid array={dataKoor.koorHumas} ketuaPosition="right"/>
+        <Grid array={dataKoor.koorMulmed} /> 
+      </div>
+    </section>
   );
 };

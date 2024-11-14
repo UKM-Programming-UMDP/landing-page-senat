@@ -3,8 +3,6 @@ import { Jumbotron } from "./components/jumbotron";
 import { KataSambutan } from "./components/kataSambutan";
 import { UnitKegiatan } from "./components/unitKegiatan";
 import { BidangEksekutif } from "./components/bidangEksekutif";
-import { arrayKoor } from "@content/about/arrayKepengurusan";
-import { Grid } from "@components/grid/grid";
 
 export const Home = () => {
   return (
@@ -16,7 +14,6 @@ export const Home = () => {
       <KataSambutan />
       <BidangEksekutif />
       <UnitKegiatan />
-      <Grid array={arrayKoor.koorHumas} />
     </HelmetProvider>
   );
 };

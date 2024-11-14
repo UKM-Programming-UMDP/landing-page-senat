@@ -1,55 +1,88 @@
-import { useEffect } from "react";
+import { Fragment } from "react";
+import useWindowSize from "../../common/hooks/useWindowSize";
 
-export const Grid = ({ array }) => {
-  const rowAnggota = () => {
-    if (array.anggota.length() == 4) {
-      return "row-span-3 grid-cols-2 grid-rows-2";
-    } else if (array.anggota.length() == 5) {
-      return "row-span-3 grid-cols-2 grid-rows-2";
-    }
-  };
-  const rowKetua = () => {
-    if (array.anggota.length() == 4) {
-      return "row-span-3";
-    } else {
-      return "row-span-2";
-    }
-  };
-  return (
-    <div className="grid gap-3 grid-cols-2 grid-rows-4 text-white mx-56">
-      <div
-        className={`rounded-3xl col-span-2 bg-black/80 text-center py-5 text-2xl font-semibold bg-cover bg-center flex items-center justify-center`}
+export const Grid = ({ array, ketuaPosition }) => {
+  const { md } = useWindowSize();
+
+  const ketuaComponent = (array) => (
+    <div
+      className="p-3 md:w-1/2 w-full rounded-3xl row-span-3 bg-dark-blue border-dark-blue border-8 text-center text-2xl font-semibold bg-cover bg-center flex items-end justify-center"
+      style={{
+        backgroundImage: url(`${array.image}`),
+        aspectRatio: `${array.anggota.length == 2 ? '0.5 / 1' :'1 / 1'}`,
+      }}
+      data-aos="fade-up"
+      data-aos-duration="600"
+    >
+      <span
+        classsName="md:text-3xl text-4xl"
+        style={{
+          WebkitTextStroke: "0.8px #000",
+        }}
       >
-        <div>
+        {array.name}
+      </span>
+    </div>
+  );
+
+  
+  const anggotaComponent = (array) => {
+    const anggotaCount = array?.anggota?.length;
+      return (
+        <div
+        className={`md:w-1/2 w-full grid gap-3 ${anggotaCount == 2 ? 'row-span-4' : 'row-span-3'} ${anggotaCount == 1? "grid-cols-1":"grid-cols-1"} text-white`}
+        data-aos="fade-up"
+        data-aos-duration="800"
+      >
+         {array?.anggota.map((anggota, idx) => (
+          
+          <div
+            className={`p-1 rounded-3xl bg-dark-blue border-8 bg-cover text-center border-dark-blue text-xl font-semibold flex items-end justify-center`}
+            style={{
+              backgroundImage: url(`${anggota?.image}`),
+              aspectRatio: "1 / 0.99",
+            }}
+          >
+            <span
+              className="md:text-2xl text-l"
+              style={{
+                WebkitTextStroke: "0.8px #000",
+              }}
+            >
+              {anggota.name}
+            </span>
+          </div>
+
+        ))}
+      </div>
+      )
+        
+ 
+  }
+
+  return (
+    <div className="gap-3 text-white px-4">
+      <div
+        className="rounded-3xl col-span-2 bg-dark-blue text-center py-5 text-2xl font-semibold bg-cover bg-center flex items-center justify-center"
+        data-aos="flip-up"
+        data-aos-duration="500"
+      >
+        <div className="md:p-4">
           <h1>Koordinator {array.divisi}</h1>
         </div>
       </div>
-      {/* box 1 */}
-      <div
-        className={`${rowKetua} rounded-3xl bg-black/80 text-center py-5 text-2xl font-semibold bg-cover bg-center flex items-center justify-center`}
-        style={{
-          backgroundImage: `url(${array.image})`,
-          aspectRatio: "1 / 1",
-        }}
-      >
-        <div>
-          <h1>{array.name}</h1>
-        </div>
-      </div>
-      {/* box 2 + grid 2 */}
-      <div className={`${rowAnggota} grid gap-3 text-white`}>
-        {array?.anggota.map((anggota, idx) => (
-          <div
-            key={idx}
-            className={`rounded-3xl bg-black/80 bg-cover text-center text-xl font-semibold flex items-center justify-center`}
-            style={{
-              backgroundImage: `url(${anggota?.image})`,
-              aspectRatio: "1 / 1",
-            }}
-          >
-            <h1>{anggota?.name}</h1>
-          </div>
-        ))}
+      <div className="flex md:flex-nowrap flex-wrap mt-3 gap-4 items-center">
+        {ketuaPosition === "right" && md ? (
+          <Fragment>
+            {anggotaComponent(array)}
+            {ketuaComponent(array)}
+          </Fragment>
+        ) : (
+          <Fragment>
+            {ketuaComponent(array)}
+            {anggotaComponent(array)}
+          </Fragment>
+        )}
       </div>
     </div>
   );
