@@ -16,9 +16,9 @@ export const Koordinator = () => {
       </h1>
       <div className="overflow-hidden grid gap-y-32 w-full max-w-screen-lg mx-auto sm:px-12">
         <Grid array={dataKoor.koorPsdm} ketuaPosition="left" />
-        <Grid array={dataKoor.koorSosial}  />
-        <Grid array={dataKoor.koorHumas} ketuaPosition="right"/>
-        <Grid array={dataKoor.koorMulmed} /> 
+        <Grid array={dataKoor.koorSosial} ketuaPosition="right" />
+        <Grid array={dataKoor.koorMulmed} />
+        <Grid array={dataKoor.koorHumas} />
       </div>
     </section>
   );

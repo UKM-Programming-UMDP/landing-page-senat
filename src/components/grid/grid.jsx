@@ -8,14 +8,14 @@ export const Grid = ({ array, ketuaPosition }) => {
     <div
       className="p-3 md:w-1/2 w-full rounded-3xl row-span-3 bg-dark-blue border-dark-blue border-8 text-center text-2xl font-semibold bg-cover bg-center flex items-end justify-center"
       style={{
-        backgroundImage: url(`${array.image}`),
-        aspectRatio: `${array.anggota.length == 2 ? '0.5 / 1' :'1 / 1'}`,
+        backgroundImage: `url(${array.image})`,
+        aspectRatio: array.anggota.length === 2 ? "0.5 / 1" : "1 / 1",
       }}
       data-aos="fade-up"
       data-aos-duration="600"
     >
       <span
-        classsName="md:text-3xl text-4xl"
+        className="md:text-3xl text-4xl"
         style={{
           WebkitTextStroke: "0.8px #000",
         }}
@@ -25,21 +25,22 @@ export const Grid = ({ array, ketuaPosition }) => {
     </div>
   );
 
-  
   const anggotaComponent = (array) => {
     const anggotaCount = array?.anggota?.length;
-      return (
-        <div
-        className={`md:w-1/2 w-full grid gap-3 ${anggotaCount == 2 ? 'row-span-4' : 'row-span-3'} ${anggotaCount == 1? "grid-cols-1":"grid-cols-1"} text-white`}
+    return (
+      <div
+        className={`md:w-1/2 w-full grid gap-3 ${
+          anggotaCount === 2 ? "row-span-4" : "row-span-3"
+        } grid-cols-1 text-white`}
         data-aos="fade-up"
         data-aos-duration="800"
       >
-         {array?.anggota.map((anggota, idx) => (
-          
+        {array?.anggota.map((anggota, idx) => (
           <div
-            className={`p-1 rounded-3xl bg-dark-blue border-8 bg-cover text-center border-dark-blue text-xl font-semibold flex items-end justify-center`}
+            key={idx}
+            className="p-1 rounded-3xl bg-dark-blue border-8 bg-cover text-center border-dark-blue text-xl font-semibold flex items-end justify-center"
             style={{
-              backgroundImage: url(`${anggota?.image}`),
+              backgroundImage: `url(${anggota?.image})`,
               aspectRatio: "1 / 0.99",
             }}
           >
@@ -52,13 +53,10 @@ export const Grid = ({ array, ketuaPosition }) => {
               {anggota.name}
             </span>
           </div>
-
         ))}
       </div>
-      )
-        
- 
-  }
+    );
+  };
 
   return (
     <div className="gap-3 text-white px-4">
