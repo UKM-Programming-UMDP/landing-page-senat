@@ -14,8 +14,8 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="bg-dark-blue fixed w-full shadow-lg z-50">
-      <div className="container lg:p-0 ps-5 pe-5 mx-auto flex items-center justify-between relative">
+    <nav className="bg-dark-blue fixed w-full ps-10 pe-10 shadow-lg z-50">
+      <div className="container mx-auto flex items-center justify-between">
         <a className="flex-shrink-0" href="#">
           <img src={img} width="100px" alt="logo" />
         </a>

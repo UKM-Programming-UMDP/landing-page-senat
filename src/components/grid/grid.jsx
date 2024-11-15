@@ -1,57 +1,107 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import useWindowSize from "../../common/hooks/useWindowSize";
-
+import clsx from "clsx";
 export const Grid = ({ array, ketuaPosition }) => {
   const { md } = useWindowSize();
+  const [clickedAnggota, setClickedAnggota] = useState([]);
 
+  const handleShowDetail = (id) => {
+    console.log(id);
+    console.log(clickedAnggota);
+    setClickedAnggota((prev) => {
+      if (prev.indexOf(id) !== -1) {
+        return prev.filter((a) => a !== id);
+      } else {
+        return [...prev, id];
+      }
+    });
+  };
+
+  //const information = use
   const ketuaComponent = (array) => (
     <div
-      className="p-3 md:w-1/2 w-full rounded-3xl row-span-3 bg-dark-blue border-dark-blue border-8 text-center text-2xl font-semibold bg-cover bg-center flex items-end justify-center"
+      className={clsx(
+        "md:w-1/2 w-full rounded-3xl row-span-3 bg-dark-blue border-dark-blue border-8 text-center text-2xl font-semibold bg-cover bg-center flex items-end justify-center"
+    )}
       style={{
         backgroundImage: `url(${array.image})`,
-        aspectRatio: "1 / 1",
+        aspectRatio: array.anggota.length === 2 ? "0.5 / 1" : "1 / 1",
       }}
-      data-aos="fade-up"
-      data-aos-duration="600"
+      data-aos="fade-right"
+      data-aos-duration="700"
+      data-aos-delay="50"
+      onClick={() => handleShowDetail(array.name)}
     >
-      <span
-        className="md:text-3xl text-4xl"
-        style={{
-          WebkitTextStroke: "0.8px #000",
-        }}
-      >
-        {array.name}
-      </span>
+      {clickedAnggota.indexOf(array.name) !== -1 && (
+        <div className={`p-4 text-center flex flex-col justify-center items-center bg-dark h-full w-full bg-gray-950/[.7]`  }>
+        <p
+          className="md:text-5xl text-l"
+          style={{
+            WebkitTextStroke: "0.8px #000",
+          }}
+        >
+         {array.name}
+        </p>
+        <p
+          className="text-base"
+          style={{
+            WebkitTextStroke: "0.8px #000",
+          }}
+        >
+          Koordinator {array.divisi}
+        </p>
+      </div>
+       
+      )}
     </div>
   );
 
-  const anggotaComponent = (array) => (
-    <div
-      className="md:w-1/2 w-full h-full grid gap-3 row-span-3 grid-cols-2 grid-rows-2 text-white"
-      data-aos="fade-up"
-      data-aos-duration="800"
-    >
-      {array?.anggota.map((anggota, idx) => (
-        <div
-          key={idx}
-          className={`p-1 rounded-3xl bg-dark-blue border-4 bg-cover text-center border-dark-blue text-xl font-semibold flex items-end justify-center`}
-          style={{
-            backgroundImage: `url(${anggota?.image})`,
-            aspectRatio: "1 / 1",
-          }}
-        >
-          <span
-            className="md:text-2xl text-l"
+  const anggotaComponent = (array) => {
+    const anggotaCount = array?.anggota?.length;
+    return (
+      <div
+        className={`md:w-1/2 w-full grid gap-3 ${
+          anggotaCount === 2 ? "row-span-4" : "row-span-3"
+        } grid-cols-1 text-white`}
+      >
+        {array?.anggota.map((anggota, idx) => (
+          <div
+            key={idx}
+            className="rounded-3xl bg-dark-blue border-8 bg-cover text-center border-dark-blue text-xl font-semibold flex items-end justify-center"
             style={{
-              WebkitTextStroke: "0.8px #000",
+              backgroundImage: `url(${anggota?.image})`,
+              aspectRatio: "1 / 0.99",
             }}
+            data-aos="fade-left"
+            data-aos-duration={600 * idx}
+            data-aos-delay="100"
+            onClick={() => handleShowDetail(anggota.name)}
           >
-            {anggota?.name}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
+            {clickedAnggota.indexOf(anggota.name) !== -1 && (
+               <div className={`p-4 text-center flex flex-col justify-center items-center bg-dark h-full w-full bg-gray-950/[.7]`  }>
+                <p
+                  className="md:text-4xl text-l"
+                  style={{
+                    WebkitTextStroke: "0.8px #000",
+                  }}
+                >
+                 {anggota.name}
+                </p>
+                <p
+                  className="text-base"
+                  style={{
+                    WebkitTextStroke: "0.8px #000",
+                  }}
+                >
+                  Anggota {anggota.divisi}
+                </p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <div className="gap-3 text-white px-4">
