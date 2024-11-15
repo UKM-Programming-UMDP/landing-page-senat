@@ -1,0 +1,38 @@
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import { Navigate } from "react-router-dom";
+export const Dropdown = ({ label, listMenu }) => {
+  return (
+    <>
+      <Popover className="relative h-full lg:block flex flex-col jutify-center items-center">
+        <PopoverButton className="outline-none h-full flex items-center gap-1 hover:text-gray-400">
+          {label}
+          <svg
+            className="w-4 h-4 ml-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </PopoverButton>
+        <PopoverPanel className="flex flex-col z-50 bg-dark-blue rounded-b-lg gap-3 lg:fixed py-3 px-5">
+          {listMenu.map((data, index) => (
+            <a
+              key={index}
+              href={data.link}
+              className="text-white hover:text-gray-400 "
+            >
+              {data.name}
+            </a>
+          ))}
+        </PopoverPanel>
+      </Popover>
+    </>
+  );
+};
