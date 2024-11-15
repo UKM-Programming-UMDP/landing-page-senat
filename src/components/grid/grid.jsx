@@ -17,7 +17,6 @@ export const Grid = ({ array, ketuaPosition }) => {
     });
   };
 
-  //const information = use
   const ketuaComponent = (array) => (
     <div
       className={clsx(
