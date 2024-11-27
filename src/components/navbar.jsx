@@ -1,6 +1,5 @@
 import { useState } from "react";
-import img from "@assets/logo_senat.png";
-import { useNavigate } from "react-router-dom";
+import img from "@assets/Logo_senat.png";
 import { dataNavbar } from "@content/navbar/dataNav";
 import { Dropdown } from "@common/components/dropdown";
 
@@ -43,13 +42,11 @@ export const Navbar = () => {
                 Home
               </a>
             </li>
-            <span
-              className="mx-auto items-center text-center"
-            >
+            <span className="mx-auto items-center text-center">
               <Dropdown label="About" listMenu={dataNavbar.about} />
             </span>
             <span className="mx-auto flex justify-center">
-              <Dropdown label="Contact" listMenu={dataNavbar.contact}  />
+              <Dropdown label="Contact" listMenu={dataNavbar.contact} />
             </span>
           </ul>
         </div>

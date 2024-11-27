@@ -1,6 +1,6 @@
 import humas from "@assets/humas.png";
 import sosial from "@assets/Sosial.png";
-import psdm from "@assets/psdm.png";
+import psdm from "@assets/PSDM.png";
 import multimedia from "@assets/multimedia.png";
 
 export const dataEksekutif = [
