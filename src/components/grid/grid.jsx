@@ -1,23 +1,29 @@
 import { Fragment, useState } from "react";
-import useWindowSize from "../../common/hooks/useWindowSize";
+import useWindowSize from "@common/hooks/useWindowSize";
 import clsx from "clsx";
+
 export const Grid = ({ array, ketuaPosition }) => {
   const { md } = useWindowSize();
   const [clickedAnggota, setClickedAnggota] = useState([]);
+  const [closingId, setClosingId] = useState(null); 
 
   const handleShowDetail = (id) => {
-    console.log(id);
-    console.log(clickedAnggota);
-    setClickedAnggota((prev) => {
-      if (prev.indexOf(id) !== -1) {
-        return prev.filter((a) => a !== id);
-      } else {
-        return [...prev, id];
-      }
-    });
-  };
+    if (clickedAnggota.indexOf(id) !== -1) {
+      setClosingId(id);
+      setTimeout(() => {
+        setClosingId(null);
+        setClickedAnggota((prev) => prev.filter((a) => a !== id));
+      }, 200); 
+    } else {
+    setClosingId(id);
+    setTimeout(() => {
+      setClosingId(null);
+      setClickedAnggota((prev) => [...prev, id]);
+    }, 200);
 
-  //const information = use
+    }
+  };
+  
   const ketuaComponent = (array) => (
     <div
       className={clsx(
@@ -27,13 +33,13 @@ export const Grid = ({ array, ketuaPosition }) => {
         backgroundImage: `url(${array.image})`,
         aspectRatio: array.anggota.length === 2 ? "0.5 / 1" : "1 / 1",
       }}
-      data-aos="fade-right"
+      data-aos="zoom-in"
       data-aos-duration="700"
       data-aos-delay="50"
       onClick={() => handleShowDetail(array.name)}
     >
-      {clickedAnggota.indexOf(array.name) !== -1 && (
-        <div className={`p-4 text-center flex flex-col justify-center items-center bg-dark h-full w-full bg-gray-950/[.7]`  }>
+      {(clickedAnggota.indexOf(array.name) !== -1 || closingId === array.name) && (
+        <div className={clsx("p-4 text-center flex flex-col justify-center items-center bg-dark h-full w-full bg-gray-950/[.7] duration-300", closingId === array.name && "opacity-0")}>
         <p
           className="md:text-5xl text-l"
           style={{
@@ -63,42 +69,36 @@ export const Grid = ({ array, ketuaPosition }) => {
         className={`md:w-1/2 w-full grid gap-3 ${
           anggotaCount === 2 ? "row-span-4" : "row-span-3"
         } grid-cols-1 text-white`}
+        data-aos="zoom-in"
+        data-aos-duration="700"
+        data-aos-delay="50"
       >
-        {array?.anggota.map((anggota, idx) => (
-          <div
-            key={idx}
-            className="rounded-3xl bg-dark-blue border-8 bg-cover text-center border-dark-blue text-xl font-semibold flex items-end justify-center"
-            style={{
-              backgroundImage: `url(${anggota?.image})`,
-              aspectRatio: "1 / 0.99",
-            }}
-            data-aos="fade-left"
-            data-aos-duration={600 * idx}
-            data-aos-delay="100"
-            onClick={() => handleShowDetail(anggota.name)}
-          >
-            {clickedAnggota.indexOf(anggota.name) !== -1 && (
-               <div className={`p-4 text-center flex flex-col justify-center items-center bg-dark h-full w-full bg-gray-950/[.7]`  }>
-                <p
-                  className="md:text-4xl text-l"
-                  style={{
-                    WebkitTextStroke: "0.8px #000",
-                  }}
-                >
-                 {anggota.name}
-                </p>
-                <p
-                  className="text-base"
-                  style={{
-                    WebkitTextStroke: "0.8px #000",
-                  }}
-                >
-                  Anggota {anggota.divisi}
-                </p>
-              </div>
-            )}
-          </div>
-        ))}
+        {array?.anggota?.map((anggota, idx) => (
+        <div
+          key={idx}
+          className="rounded-3xl bg-dark-blue border-8 bg-cover text-center border-dark-blue text-xl font-semibold flex items-end justify-center"
+          style={{
+            backgroundImage: `url(${anggota?.image})`,
+            aspectRatio: "1 / 0.99",
+          }}
+          onClick={() => handleShowDetail(anggota.name)}
+        >
+          {(clickedAnggota.indexOf(anggota.name) !== -1 || closingId === anggota.name) && (
+            <div
+              className={`p-4 text-center flex flex-col justify-center items-center bg-dark h-full w-full bg-gray-950/[.7] transition-opacity duration-300 ${
+                closingId === anggota.name && "opacity-0"
+              }`}
+            >
+              <p className="md:text-4xl text-l" style={{ WebkitTextStroke: "0.8px #000" }}>
+                {anggota.name}
+              </p>
+              <p className="text-base" style={{ WebkitTextStroke: "0.8px #000" }}>
+                Anggota {anggota.divisi}
+              </p>
+            </div>
+          )}
+        </div>
+      ))}
       </div>
     );
   };
@@ -114,7 +114,9 @@ export const Grid = ({ array, ketuaPosition }) => {
           <h1>Koordinator {array.divisi}</h1>
         </div>
       </div>
-      <div className="flex md:flex-nowrap flex-wrap mt-3 gap-4 items-center">
+      <div 
+       className="flex md:flex-nowrap flex-wrap mt-3 gap-4 items-center" 
+      >
         {ketuaPosition === "right" && md ? (
           <Fragment>
             {anggotaComponent(array)}

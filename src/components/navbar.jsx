@@ -1,28 +1,18 @@
 import { useState } from "react";
-import img from "@assets/logo_senat.png";
-import { useNavigate } from "react-router-dom";
+import img from "@assets/Logo_senat.png";
 import { dataNavbar } from "@content/navbar/dataNav";
-import { Dropdown } from "../common/components/dropdown";
+import { Dropdown } from "@common/components/dropdown";
 
 export const Navbar = () => {
   const [toggler, setToggler] = useState(false);
-  const navigate = useNavigate();
-  const [aboutDropdown, setAboutDropdown] = useState(false);
-  const linkAbout = () => {
-    setAboutDropdown(!aboutDropdown);
-    navigate("about");
-  };
-
   return (
     <nav className="bg-dark-blue fixed w-full ps-10 pe-10 shadow-lg z-50">
       <div className="container mx-auto flex items-center justify-between">
         <a className="flex-shrink-0" href="#">
           <img src={img} width="100px" alt="logo" />
         </a>
-
         <button
           className="block lg:hidden text-white focus:outline-none"
-          type="button"
           aria-label="Toggle navigation"
           onClick={() => setToggler(!toggler)}
         >
@@ -52,12 +42,9 @@ export const Navbar = () => {
                 Home
               </a>
             </li>
-            <button
-              className="mx-auto items-center"
-              onClick={() => linkAbout()}
-            >
+            <span className="mx-auto items-center text-center">
               <Dropdown label="About" listMenu={dataNavbar.about} />
-            </button>
+            </span>
             <span className="mx-auto flex justify-center">
               <Dropdown label="Contact" listMenu={dataNavbar.contact} />
             </span>

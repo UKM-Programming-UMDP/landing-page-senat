@@ -1,6 +1,6 @@
 import humas from "@assets/humas.png";
 import sosial from "@assets/Sosial.png";
-import psdm from "@assets/psdm.png";
+import psdm from "@assets/PSDM.png";
 import multimedia from "@assets/multimedia.png";
 
 export const dataEksekutif = [
@@ -8,24 +8,24 @@ export const dataEksekutif = [
     icon: humas,
     name: "Humas",
     descriptions:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus lectus netus nibh;",
+      "Humas adalah bagian organisasi yang bertugas menjalin komunikasi dengan publik, baik satu arah maupun dua arah.",
   },
   {
     icon: sosial,
     name: "Sosial",
     descriptions:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus lectus netus nibh;",
+      "Menjalankan program sosial untuk mendukung kesejahteraan masyarakat dan mempererat hubungan.",
   },
   {
     icon: psdm,
     name: "PSDM",
     descriptions:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus lectus netus nibh;",
+      "Mengembangkan potensi anggota melalui pelatihan, evaluasi kinerja, dan pembinaan rutin.",
   },
   {
     icon: multimedia,
     name: "Multimedia",
     descriptions:
-      "Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus lectus netus nibh;",
+      "Membuat konten visual dan digital untuk mendukung komunikasi serta memperluas jangkauan informasi.",
   },
 ];

@@ -1,16 +1,18 @@
-import jumbotron from "@assets/Jumbotron.png";
-import orang from "@assets/jumbotron-orang.png";
+import orang from "@assets/figure-jumbotron.png";
 
 export const Jumbotron = () => {
   return (
     <div
-      className="jumbotron border-none text-white bg-dark-blue bg-cover bg-center lg:px-5 lg:pt-16 pt-28 h-max overflow-hidden relative"
+      className="jumbotron overflow-hidden border-none text-white bg-dark-blue bg-cover bg-center lg:px-5 lg:pt-16 pt-28 h-max "
       data-aos="zoom-out"
       data-aos-duration="500"
-      // style={{ height: "120vh" }}
     >
       <div className="flex gap-2 ps-10 pe-10 items-center lg:pt-28">
-        <div className="jumbotron-text lg:w-3/5 flex flex-col gap-8">
+        <div
+          className="jumbotron-text lg:w-3/5 flex flex-col gap-8"
+          data-aos="fade-left"
+          data-aos-duration="900"
+        >
           <h1 className="text-4xl font-extrabold w-full text-center md:text-5xl lg:text-left text-white lg:text-6xl">
             SENAT MAHASISWA UNIVERSITAS MDP
           </h1>
@@ -34,13 +36,13 @@ export const Jumbotron = () => {
         <div
           className="hidden lg:block lg:w-3/5 sm:w-2/5"
           style={{ zIndex: -1 }}
-          // data-aos="zoom-out"
-          // data-aos-duration="500"
         >
           <img
             src={orang}
             alt=""
-            className="absolute lg:w-1/2 w-2/5 lg:top-36 lg:right-2"
+            className="absolute lg:w-1/2 w-2/5 lg:top-36 lg:right-10"
+            data-aos="zoom-out"
+            data-aos-duration="800"
           />
         </div>
       </div>

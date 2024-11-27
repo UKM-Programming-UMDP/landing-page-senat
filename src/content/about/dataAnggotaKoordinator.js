@@ -1,40 +1,28 @@
-import anggotahumas1 from "@assets/fotoTester5.jpg";
-import anggotahumas2 from "@assets/fotoTester5.jpg";
-import anggotahumas3 from "@assets/fotoTester5.jpg";
-import anggotahumas4 from "@assets/fotoTester5.jpg";
-import anggotapsdm1 from "@assets/fotoTester5.jpg";
-import anggotapsdm2 from "@assets/fotoTester5.jpg";
-import anggotapsdm3 from "@assets/fotoTester5.jpg";
-import anggotapsdm4 from "@assets/fotoTester5.jpg";
-import anggotasosial1 from "@assets/fotoTester5.jpg";
-import anggotasosial2 from "@assets/fotoTester5.jpg";
-import anggotasosial3 from "@assets/fotoTester5.jpg";
-import anggotasosial4 from "@assets/fotoTester5.jpg";
-import anggotamulmed1 from "@assets/fotoTester5.jpg";
-import anggotamulmed2 from "@assets/fotoTester5.jpg";
-import anggotamulmed3 from "@assets/fotoTester5.jpg";
-import anggotamulmed4 from "@assets/fotoTester5.jpg";
+import anggotahumas1 from "@assets/Putra-Ulung.webp";
+import anggotahumas2 from "@assets/Hera-Margareta.webp";
+import anggotapsdm1 from "@assets/Ahmad-Fahri-Ramadhani.webp";
+import anggotapsdm2 from "@assets/Tria-Nanda-Mughny.webp";
+import anggotasosial1 from "@assets/Putri-Aprilia.webp";
+import anggotamulmed1 from "@assets/Muhammad-Aldiansyah.webp";
 
 export const anggotaKoordinator = () => {
   const anggotaHumas = [
-    { name: "Yulita Indira", image: anggotahumas1, divisi: "humas" },
-    { name: "Hera Margareta", image: anggotahumas2, divisi: "humas" },
-   
+    { name: "Putra Ulung", image: anggotahumas1, divisi: "Humas" },
+    { name: "Hera Margareta", image: anggotahumas2, divisi: "Humas" },
   ];
 
   const anggotaPsdm = [
-    { name: "Verah", image: anggotapsdm1, divisi: "psdm" },
-    { name: "Tria Nanda Mughny", image: anggotapsdm2, divisi: "psdm" },
-
+    { name: "Ahmad Fahri Ramadhani", image: anggotapsdm1, divisi: "PSDM" },
+    { name: "Tria Nanda Mughny", image: anggotapsdm2, divisi: "PSDM" },
   ];
 
   const anggotaSosial = [
-    { name: "Al Kausar", image: anggotasosial1, divisi: "sosial" },  
+    { name: "Putri Aprilia", image: anggotasosial1, divisi: "Sosial" },
   ];
 
   const anggotaMulmed = [
-    { name: "Muhammad Alif Fahlevi", image: anggotamulmed1, divisi: "mulmed" }, 
-     ];
+    { name: "Muhammad Aldiansyah", image: anggotamulmed1, divisi: "Mulmed" }, 
+  ];
 
   return {
     anggotaHumas,
