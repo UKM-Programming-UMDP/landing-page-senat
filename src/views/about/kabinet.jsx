@@ -1,6 +1,6 @@
 import logoKabinet from "@assets/logo-kabinet.png";
 import { Fragment } from "react";
-import useWindowSize from "../../common/hooks/useWindowSize";
+import useWindowSize from "@common/hooks/useWindowSize";
 
 export const Kabinet = () => {
   const { md } = useWindowSize();

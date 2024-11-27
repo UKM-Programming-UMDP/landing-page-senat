@@ -1,5 +1,3 @@
-import clsx from "clsx";
-
 export const VisiMisi = () => {
   const duration = (index) => 500 + index * 300;
 
@@ -28,7 +26,7 @@ export const VisiMisi = () => {
       >
         VISI MISI
       </h1>
-      
+
       <div className="mx-8 bg-dark-blue border p-7 pt-3 rounded-3xl">
         <h1
           className="text-4xl p-0 my-3 font-bold"

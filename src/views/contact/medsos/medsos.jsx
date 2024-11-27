@@ -1,4 +1,4 @@
-import pakKetu from "@assets/figure1-ketua.png";
+import pakKetu from "@assets/figure1-Ketua.png";
 import { dataMedsos } from "@content/contact/dataMedsos";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 
