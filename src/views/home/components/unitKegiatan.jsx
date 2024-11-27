@@ -1,8 +1,8 @@
-import ukm from "@assets/kaka-cakep.png";
+import ukm from "@assets/figure-UKM.png";
 
 export const UnitKegiatan = () => {
   return (
-    <div className="lg:pe-10 lg:ps-10 pe-3 ps-3 mt-20 mb-20">
+    <div className="lg:pe-10 lg:ps-10 pe-3 ps-3 mt-20 mb-20 overflow-x-hidden">
       <h1
         className="text-center text-3xl font-bold mb-10"
         data-aos="zoom-out"
@@ -33,7 +33,7 @@ export const UnitKegiatan = () => {
             data-aos="zoom-in"
             data-aos-duration="700"
           >
-            <img src={ukm} className="w-4/5" alt="image" />
+            <img src={ukm} className="max-[1086px]:w-[70%] max-[1200px]:w-[65%] max-[1300px]:w-[62%]  xl:w-[54.4%] " alt="image" />
           </div>
           <div data-aos="fade-right" data-aos-duration="900">
             <h3 className="mt-3 mb-3 text-xl font-bold">UKM KEAGAMAAN</h3>

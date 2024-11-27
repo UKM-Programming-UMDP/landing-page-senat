@@ -10,7 +10,7 @@ export const Koordinator = () => {
       <h1
         className="text-5xl mb-6 font-bold"
         data-aos="zoom-in"
-        data-aos-duration="500"
+        data-aos-duration="700"
       >
         KOORDINATOR
       </h1>

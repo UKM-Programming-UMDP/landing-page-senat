@@ -40,9 +40,9 @@ export const Kabinet = () => {
   );
   return (
     <>
-      <section id="kabinet" className="overflow-hidden bg-gray-300 py-20">
+      <section id="kabinet" className="overflow-hidden">
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-center"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center"
           data-aos="fade-left"
           data-aos-duration="500"
         >

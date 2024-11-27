@@ -3,7 +3,7 @@ import { Navbar } from "@components/navbar";
 import { Footer } from "@components/footer";
 export const Layout = () => {
   return (
-    <div className="overflow-y-hidden">
+    <div className="overflow-y-hidden w-full">
       <Navbar />
       <Outlet />
       <Footer />
