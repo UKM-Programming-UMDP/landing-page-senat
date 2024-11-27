@@ -11,7 +11,6 @@ export const Footer = () => {
       <div className="mt-3 mb-3">
         <h4 className="text-center mt-5 sub-title" data-aos="zoom-out" data-aos-duration="500">COLLABORATION WITH</h4>
       </div>
-
       <div className="flex flex-wrap gap-9 justify-center items-center">
         <div className="lg:w-1/11 md:w-1/6 w-1/4" >
           <img 

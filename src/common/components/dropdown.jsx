@@ -9,9 +9,7 @@ export const Dropdown = ({ label, listMenu }) => {
     setDropdown(!dropdown);
     if (label === "About"){
       navigate("about");
-
     }
-    
   };
 
   return (
@@ -39,7 +37,7 @@ export const Dropdown = ({ label, listMenu }) => {
             <a
               key={index}
               href={data.link}
-              className="text-white hover:text-gray-400 "
+              className="text-white hover:text-gray-400"
             >
               {data.name}
             </a>

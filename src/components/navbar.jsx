@@ -2,24 +2,16 @@ import { useState } from "react";
 import img from "@assets/logo_senat.png";
 import { useNavigate } from "react-router-dom";
 import { dataNavbar } from "@content/navbar/dataNav";
-import { Dropdown } from "../common/components/dropdown";
+import { Dropdown } from "@common/components/dropdown";
 
 export const Navbar = () => {
   const [toggler, setToggler] = useState(false);
-  // const navigate = useNavigate();
-  // const [dropdown, setAboutDropdown] = useState(false);
-  // const handleDropDown = () => {
-  //   setAboutDropdown(!dropdown);
-  //   navigate("about");
-  // };
-
   return (
     <nav className="bg-dark-blue fixed w-full ps-10 pe-10 shadow-lg z-50">
       <div className="container mx-auto flex items-center justify-between">
         <a className="flex-shrink-0" href="#">
           <img src={img} width="100px" alt="logo" />
         </a>
-
         <button
           className="block lg:hidden text-white focus:outline-none"
           aria-label="Toggle navigation"

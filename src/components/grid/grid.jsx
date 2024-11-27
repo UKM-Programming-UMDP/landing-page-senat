@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import useWindowSize from "../../common/hooks/useWindowSize";
+import useWindowSize from "@common/hooks/useWindowSize";
 import clsx from "clsx";
 
 export const Grid = ({ array, ketuaPosition }) => {
@@ -39,7 +39,7 @@ export const Grid = ({ array, ketuaPosition }) => {
       onClick={() => handleShowDetail(array.name)}
     >
       {(clickedAnggota.indexOf(array.name) !== -1 || closingId === array.name) && (
-        <div className={clsx("p-4 text-center flex flex-col justify-center items-center bg-dark h-full w-full bg-gray-950/[.7] duration-300 ", closingId === array.name && "opacity-0")}>
+        <div className={clsx("p-4 text-center flex flex-col justify-center items-center bg-dark h-full w-full bg-gray-950/[.7] duration-300", closingId === array.name && "opacity-0")}>
         <p
           className="md:text-5xl text-l"
           style={{
@@ -99,7 +99,6 @@ export const Grid = ({ array, ketuaPosition }) => {
           )}
         </div>
       ))}
-
       </div>
     );
   };

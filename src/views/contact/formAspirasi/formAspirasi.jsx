@@ -5,7 +5,6 @@ export const FormAspirasi = () => {
     <HelmetProvider>
       <section className="form-aspirasi bg-gray-300 flex justify-center items-center">
           <Helmet>
-
             <title>Form Aspirasi Pages</title>
           </Helmet>
           <iframe
