@@ -6,10 +6,7 @@ export const BadanKepengurusan = () => {
       <section id="kepengurusan" className="text-center overflow-hidden">
         <h1 className="text-5xl mb-16 font-bold">BADAN KEPENGURUSAN</h1>
         <div className="p-6 bg-dark-blue md:px-32 py-20">
-          <div
-            className="flex items-center lg:gap-16 gap-6"
-        
-          >
+          <div className="flex items-center lg:gap-16 gap-6">
             <img
               src={dataKepengurusan.ketua.image}
               alt="Gambar"
@@ -28,16 +25,13 @@ export const BadanKepengurusan = () => {
               <h2 className="lg:text-2xl md:text-lg text-3xl mb-4">
                 Ketua Senat
               </h2>
-        
               <p className="md:text-md text-gray-500 leading-7">
                 {dataKepengurusan.ketua.descriptions}
               </p>
             </div>
           </div>
         </div>
-        <div
-          className="flex relative items-center md:px-32 px-8 py-20 gap-16"
-        >
+        <div className="flex relative items-center md:px-32 px-8 py-20 gap-16">
           <div className="w-3/5 text-right md:leading-10 mr-4"   
           data-aos="fade-right"
           data-aos-duration="600">
@@ -50,7 +44,6 @@ export const BadanKepengurusan = () => {
             <p className="md:text-md text-gray-500 leading-7">
                 {dataKepengurusan.wakil.descriptions}
             </p>
-           
           </div>
           <div 
             className="w-2/5"
@@ -58,14 +51,11 @@ export const BadanKepengurusan = () => {
             data-aos-duration="600"
           >
             <img
-           
             src={dataKepengurusan.wakil.image}
             alt="Gambar"
             className="w-full transform scale-x-[-1]"
-           
           />
           </div>
-        
         </div>
         <div className="flex md:flex-row flex-col py-20 items-center justify-center text-center p-6 bg-dark-blue">
           <div
