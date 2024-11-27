@@ -1,10 +1,23 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import { Navigate } from "react-router-dom";
+import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 export const Dropdown = ({ label, listMenu }) => {
+  const navigate = useNavigate();
+  const [dropdown, setDropdown] = useState(false);
+  
+  const handleDropDown = () => {
+    setDropdown(!dropdown);
+    if (label === "About"){
+      navigate("about");
+
+    }
+    
+  };
+
   return (
     <>
       <Popover className="relative h-full lg:block flex flex-col jutify-center items-center">
-        <PopoverButton className="outline-none h-full flex items-center gap-1 hover:text-gray-400">
+        <PopoverButton className="outline-none h-full flex items-center gap-1 hover:text-gray-400" onClick={() => handleDropDown()}>
           {label}
           <svg
             className="w-4 h-4 ml-1"

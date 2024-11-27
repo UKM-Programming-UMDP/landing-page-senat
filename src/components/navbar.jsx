@@ -6,12 +6,12 @@ import { Dropdown } from "../common/components/dropdown";
 
 export const Navbar = () => {
   const [toggler, setToggler] = useState(false);
-  const navigate = useNavigate();
-  const [aboutDropdown, setAboutDropdown] = useState(false);
-  const linkAbout = () => {
-    setAboutDropdown(!aboutDropdown);
-    navigate("about");
-  };
+  // const navigate = useNavigate();
+  // const [dropdown, setAboutDropdown] = useState(false);
+  // const handleDropDown = () => {
+  //   setAboutDropdown(!dropdown);
+  //   navigate("about");
+  // };
 
   return (
     <nav className="bg-dark-blue fixed w-full ps-10 pe-10 shadow-lg z-50">
@@ -22,7 +22,6 @@ export const Navbar = () => {
 
         <button
           className="block lg:hidden text-white focus:outline-none"
-          type="button"
           aria-label="Toggle navigation"
           onClick={() => setToggler(!toggler)}
         >
@@ -52,14 +51,13 @@ export const Navbar = () => {
                 Home
               </a>
             </li>
-            <button
-              className="mx-auto items-center"
-              onClick={() => linkAbout()}
+            <span
+              className="mx-auto items-center text-center"
             >
               <Dropdown label="About" listMenu={dataNavbar.about} />
-            </button>
+            </span>
             <span className="mx-auto flex justify-center">
-              <Dropdown label="Contact" listMenu={dataNavbar.contact} />
+              <Dropdown label="Contact" listMenu={dataNavbar.contact}  />
             </span>
           </ul>
         </div>

@@ -1,12 +1,13 @@
-import ketua from "@assets/pemimpin-hebat.png";
-import wakil from "@assets/pemimpin-hebat.png";
-import sekretaris from "@assets/pemimpin-hebat.png";
-import bendahara from "@assets/pemimpin-hebat.png";
-import koorhumas from "@assets/fotoTester4.jpg";
-import koorsosial from "@assets/fotoTester2.jpg";
-import koorpsdm from "@assets/fotoTester3.jpeg";
-import koormulmed from "@assets/fotoTester1.jpg";
+import ketua from "@assets/foto-ketua-senat2.png";
+import wakil from "@assets/foto-wakil-senat.png";
+import sekretaris from "@assets/Foto-Selvi.png";
+import bendahara from "@assets/Foto-Muhammad-Fauzan.png";
+import koorhumas from "@assets/Callista-Virginia.webp";
+import koorsosial from "@assets/Johan-Indra-Saputra.webp";
+import koorpsdm from "@assets/Muh-Firizki.webp";
+import koormulmed from "@assets/Muhammad-Alif-Fahlevi.webp";
 import { anggotaKoordinator } from "./dataAnggotaKoordinator";
+
 
 const { anggotaHumas, anggotaPsdm, anggotaSosial, anggotaMulmed } =
   anggotaKoordinator();
@@ -16,12 +17,14 @@ export const dataKepengurusan = {
     name: "M. Roihan Jannatun Adhen",
     image: ketua,
     descriptions:
-      '" Pemimpin yang baik menerima sedikit lebih banyak dari bagiannya untuk disalahkan, sedikit lebih sedikit dari bagiannya untuk dipuji." - Arnold H. Glasow quoteny',
+      '"Pemimpin yang baik menerima sedikit lebih banyak dari bagiannya untuk disalahkan, sedikit lebih sedikit dari bagiannya untuk dipuji." - Arnold H. Glasow quoteny',
   },
   wakil: {
     name: "Mario Rivaldo",
     image: wakil,
-    descriptions: '"Lorem Ipsum blablabla ayam bekokok petok petok"',
+    descriptions:[
+      '"Pemimpin yang baik tidak hanya menunjukan jalan, tapi juga berjalan bersama."'
+    ],
   },
   sekretaris: {
     name: "Silvi Mutia",
@@ -38,28 +41,28 @@ export const dataKepengurusan = {
 export const dataKoor = {
   koorHumas: {
     divisi: "Hubungan Masyarakat",
-    name: "M. Rezki Arranga",
+    name: "Callista Virginia",
     image: koorhumas,
     descriptions: "",
     anggota: anggotaHumas,
   },
   koorPsdm: {
     divisi: "Pengembangan Sumber Daya Manusia",
-    name: "Felix Melvin",
+    name: "Muh Firizki",
     image: koorpsdm,
     descriptions: "",
     anggota: anggotaPsdm,
   },
   koorSosial: {
     divisi: "Sosial dan Dana Usaha",
-    name: "Iftitah Meyyasti A.",
+    name: "Johan Indra Saputra",
     image: koorsosial,
     descriptions: "",
     anggota: anggotaSosial,
   },
   koorMulmed: {
     divisi: "Kreativitas & Multimedia",
-    name: "M. Abbdurahman",
+    name: "Muhammad Alif Fahlevi",
     image: koormulmed,
     descriptions: "",
     anggota: anggotaMulmed,
