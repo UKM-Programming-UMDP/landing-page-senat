@@ -24,7 +24,7 @@ export const Jumbotron = () => {
 
           <div className="lg:w-1/4 w-40 mx-auto lg:mx-0">
             <a
-              className="btn w-full rounded-full text-white p-3"
+              className="btn w-full rounded-full text-white p-3 cursor-pointer"
               style={{ backgroundColor: "#1f4287" }}
               href="https://docs.google.com/forms/d/e/1FAIpQLSfgIcdM-wJ9MLHXz6x4cyQyxvnhcUSrk6v3p4awjuxj4a86pw/viewform"
               target="_blank"
