@@ -3,9 +3,13 @@ import { dataEksekutif } from "@content/home/dataEksekutif";
 
 export const BidangEksekutif = () => {
   const duration = (index) => 500 + index * 300;
+
   return (
-    <div className="mt-20 mb-20 lg:me-10 lg:ms-10 me-3 ms-3 overflow-x-hidden">
-      <div className="mt-5 mb-5">
+    <div
+      className="lg:me-10 lg:ms-10 me-3 ms-3 overflow-x-hidden"
+      id="bidangEksekutif"
+    >
+      <div className="mt-32 mb-5 ">
         <h1
           className="text-center text-3xl font-bold"
           data-aos="zoom-out"
@@ -32,24 +36,24 @@ export const BidangEksekutif = () => {
                 <div
                   className={`${
                     index % 3 === 0 ? "bg-white" : "bg-dark-blue"
-                  } p-3 rounded-full h-full`}
+                  } p-3 rounded-full h-full `}
                 >
                   <img
                     src={item.icon}
                     alt="icon"
-                    className={`w-full h-full ${
+                    className={`w-12 h-full ${
                       index % 3 === 0 ? "filter-dark-blue" : ""
                     }`}
                   />
                 </div>
                 <h5 className="mt-3 mb-3 text-xl font-semibold">{item.name}</h5>
-                <p className="text-justify mt-1">{item.descriptions}</p>
+                <p className="text-justify text-sm mt-1">{item.descriptions}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="lg:w-1/2 mt-4 mb-4">
+        <div className="lg:w-2/5 mt-4 mb-4">
           <img
             src={img}
             alt="Keluarga Cemara"

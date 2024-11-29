@@ -35,7 +35,7 @@ export const Dropdown = ({ label, listMenu }) => {
             />
           </svg>
         </PopoverButton>
-        <PopoverPanel className="flex flex-col z-50 bg-dark-blue rounded-b-lg gap-3 lg:fixed py-3 px-5">
+        <PopoverPanel className="flex text-left flex-col z-50 bg-dark-blue rounded-b-lg gap-3 lg:fixed py-3 px-5">
           {listMenu.map((data, index) => (
             <a
               key={index}

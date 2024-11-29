@@ -1,7 +1,7 @@
 export const ProgramKerja = () => {
   const duration = (index) => 500 + index * 300;
   const listProker = [
-    "MDP Bersuara & SEMA Bicara",
+    "SEMA Confess & SEMA Bicara Issue",
     "Sema Goes To Campus & Safari Mahasiswa",
     "MDP Olympic & Festech UMDP",
     "PKKMB & LKMM",

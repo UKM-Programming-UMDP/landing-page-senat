@@ -34,7 +34,11 @@
 }
 
 .form-aspirasi {
-  height: 250vh;
+  height: 205vh;
+}
+
+.form-aspirasi-mobile {
+  height: 260vh;
 }
 
 .background-profile {
