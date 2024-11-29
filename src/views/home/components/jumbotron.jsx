@@ -7,7 +7,7 @@ export const Jumbotron = () => {
       data-aos="zoom-out"
       data-aos-duration="500"
     >
-      <div className="flex gap-2 ps-10 pe-10 items-center lg:pt-28">
+      <div className="flex gap-2 ps-10 pe-10 items-center min-[1300px]:pt-28">
         <div
           className="jumbotron-text lg:w-3/5 flex flex-col gap-8"
           data-aos="fade-left"
@@ -22,14 +22,14 @@ export const Jumbotron = () => {
             Universitas MDP.
           </p>
 
-          <div className="lg:w-1/4 w-40 mx-auto lg:mx-0">
+          <div className="mx-auto lg:mx-0">
             <a
               className="btn w-full rounded-full text-white p-3 cursor-pointer"
               style={{ backgroundColor: "#1f4287" }}
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfgIcdM-wJ9MLHXz6x4cyQyxvnhcUSrk6v3p4awjuxj4a86pw/viewform"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd1UfOyXQuY6JdEVT-3DHZQgTRoxiKEOEe9qWcru6NN0CuQqA/viewform?usp=sf_link"
               target="_blank"
             >
-              Form Aspirasi
+              Form Sema Confess
             </a>
           </div>
         </div>

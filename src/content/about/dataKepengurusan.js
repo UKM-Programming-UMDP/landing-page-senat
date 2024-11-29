@@ -8,7 +8,6 @@ import koorpsdm from "@assets/Muh-Firizki.webp";
 import koormulmed from "@assets/Muhammad-Alif-Fahlevi.webp";
 import { anggotaKoordinator } from "./dataAnggotaKoordinator";
 
-
 const { anggotaHumas, anggotaPsdm, anggotaSosial, anggotaMulmed } =
   anggotaKoordinator();
 
@@ -22,8 +21,8 @@ export const dataKepengurusan = {
   wakil: {
     name: "Mario Rivaldo",
     image: wakil,
-    descriptions:[
-      '"Pemimpin yang baik tidak hanya menunjukan jalan, tapi juga berjalan bersama."'
+    descriptions: [
+      '"Pemimpin yang baik tidak hanya menunjukan jalan, tapi juga berjalan bersama."',
     ],
   },
   sekretaris: {
@@ -48,7 +47,7 @@ export const dataKoor = {
   },
   koorPsdm: {
     divisi: "Pengembangan Sumber Daya Manusia",
-    name: "Muh Firizki",
+    name: "Muh. Firizki",
     image: koorpsdm,
     descriptions: "",
     anggota: anggotaPsdm,

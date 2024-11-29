@@ -3,46 +3,64 @@ import { Fragment } from "react";
 import useWindowSize from "@common/hooks/useWindowSize";
 
 export const Kabinet = () => {
-  const { md } = useWindowSize();
+  const windowSize = useWindowSize();
 
-  const Description = () => (
-    <div
-      className={`md:w-3/4 w-full text-center bg-dark-blue p-8 sm:p-10 ${
-        md ? "rounded-l-2xl" : "rounded-b-3xl"
-      }`}
-    >
-      <p className="text-justify text-lg lg:text-2xl">
-        Dalam bahasa Sanskerta, kata "sahakarya" terdiri dari dua bagian: "saha"
-        yang berarti "bersama" atau "dengan" dan "karya" yang berarti
-        "pekerjaan" atau "usaha". Jadi, "sahakarya" dapat diartikan sebagai
-        "kerja sama" atau "kolaborasi". Sahakarya memiliki makna untuk
-        menciptakan sebuah wadah aspirasi mahasiswa dan menjadi wadah dari
-        mahasiswa itu sendiri untuk belajar dalam mengembangkan kemampuan
-        berorganisasi atau soft skill mereka sehingga menghasilkan output
-        sebagai mahasiswa dalam bidang yang mereka minati.
-      </p>
-    </div>
-  );
-  const Image = () => (
-    <div
-      className={`md:w-1/4 w-full text-center p-8 bg-dark-blue ${
-        md ? "md:rounded-r-full" : "rounded-t-3xl"
-      } flex items-center justify-center`}
-    >
-      <div>
-        <img
-          src={logoKabinet}
-          alt="Image Kabinet Sahakarya"
-          className="md:w-full w-3/5 h-auto mx-auto"
-        />
+  const Description = () => {
+    const descriptionClass = windowSize["2lg"]
+      ? "w-3/4 rounded-l-2xl"
+      : "w-full rounded-b-3xl";
+
+    return (
+      <div
+        className={`text-center bg-dark-blue p-8 sm:p-10 ${descriptionClass}`}
+      >
+        <p className="text-justify text-lg min-[1200px]:text-2xl">
+          Dalam bahasa Sanskerta, kata "sahakarya" terdiri dari dua bagian:
+          "saha" yang berarti "bersama" atau "dengan" dan "karya" yang berarti
+          "pekerjaan" atau "usaha". Jadi, "sahakarya" dapat diartikan sebagai
+          "kerja sama" atau "kolaborasi". Sahakarya memiliki makna untuk
+          menciptakan sebuah wadah aspirasi mahasiswa dan menjadi wadah dari
+          mahasiswa itu sendiri untuk belajar dalam mengembangkan kemampuan
+          berorganisasi atau soft skill mereka sehingga menghasilkan output
+          sebagai mahasiswa dalam bidang yang mereka minati.
+        </p>
       </div>
-    </div>
-  );
+    );
+  };
+
+  const Image = () => {
+    const imageClass = windowSize["2lg"]
+      ? "w-1/4 rounded-r-full"
+      : "w-full rounded-t-3xl";
+
+    return (
+      <div
+        className={`text-center mt-0 p-8 bg-dark-blue ${imageClass} flex items-center justify-center`}
+      >
+        <div>
+          <img
+            src={logoKabinet}
+            alt="Image Kabinet Sahakarya"
+            className={`${
+              windowSize["2lg"] ? "w-full" : "w-3/5"
+            } h-auto mx-auto`}
+          />
+        </div>
+      </div>
+    );
+  };
   return (
     <>
-      <section id="kabinet" className="overflow-hidden">
+      <section
+        id="kabinet"
+        className={`overflow-hidden lg:h-screen flex flex-col justify-center items-center${
+          windowSize["2lg"] ? "" : "md:p-20"
+        }`}
+      >
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 text-center"
+          className={`font-bold text-center mb-10 ${
+            windowSize["2lg"] ? "text-5xl" : "text-3xl sm:text-4xl"
+          }`}
           data-aos="fade-left"
           data-aos-duration="500"
         >
@@ -53,8 +71,12 @@ export const Kabinet = () => {
           data-aos="fade-left"
           data-aos-duration="500"
         >
-          <div className="flex md:flex-nowrap flex-wrap mt-3 items-stretch">
-            {md ? (
+          <div
+            className={`flex ${
+              windowSize["2lg"] ? "flex-nowrap" : "flex-wrap"
+            } mt-3 items-stretch`}
+          >
+            {windowSize["2lg"] ? (
               <Fragment>
                 {Description()}
                 {Image()}
