@@ -2,9 +2,12 @@ import fotoSenat from "@assets/foto-ketua-senat.png";
 
 export const KataSambutan = () => {
   return (
-    <div className="lg:pe-10 lg:ps-10 pe-3 ps-3 mb-10 overflow-x-hidden">
-      <div className="mt-3 mb-5 flex flex-col lg:flex-row justify-center gap-20 items-center opening">
-        <div className="lg:w-1/2" data-aos="fade-right" data-aos-duration="500">
+    <section
+      className="lg:pe-10 lg:ps-10 pe-3 ps-3 overflow-x-hidden min-h-screen pt-10"
+      id="kataSambutan"
+    >
+      <div className="flex flex-col lg:flex-row justify-center gap-20 items-center opening mt-20">
+        <div className="lg:w-1/3" data-aos="fade-right" data-aos-duration="500">
           <img src={fotoSenat} alt="" className="w-full" />
         </div>
         <div className="lg:w-1/2" data-aos="fade-left" data-aos-duration="700">
@@ -35,6 +38,6 @@ export const KataSambutan = () => {
           <p className="text-right text-gray-500">14 September 2024</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

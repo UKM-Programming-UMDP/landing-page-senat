@@ -20,9 +20,10 @@ export const About = () => {
       <Helmet>
         <title>About Page</title>
       </Helmet>
+
+      <Profile />
+      <Kabinet />
       <div className="overflow-hidden grid gap-y-40">
-        <Profile />
-        <Kabinet />
         <VisiMisi />
         <BadanKepengurusan />
         <Koordinator />

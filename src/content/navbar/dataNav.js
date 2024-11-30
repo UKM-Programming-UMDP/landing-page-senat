@@ -31,7 +31,7 @@ export const dataNavbar = {
       link: "/contact/social-media",
     },
     {
-      name: "Form Aspirasi",
+      name: "Form Sema Confess",
       link: "/contact/form-aspirasi",
     },
   ],
