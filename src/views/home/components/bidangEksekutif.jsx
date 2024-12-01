@@ -20,7 +20,7 @@ export const BidangEksekutif = () => {
       </div>
 
       <div className="flex flex-col-reverse min-[1300px]:flex-row mt-3 mb-3 justify-center items-center">
-        <div className="flex flex-wrap justify-center items-center gap-4 min-[1300px]:w-1/2 mt-4 mb-4">
+        <div className="flex flex-wrap justify-center items-center gap-4 min-[1300px]:w-1/2 min-[1420px]:w-50 mt-4 mb-4 xl:p-0 sm:p-24 p-6">
           {dataEksekutif.map((item, index) => (
             <div
               key={index}
@@ -28,7 +28,7 @@ export const BidangEksekutif = () => {
                 index % 3 === 0
                   ? "bg-dark-blue text-white lg:bg-dark-blue lg:text-white"
                   : "text-black"
-              } border-bidang-eksekutif p-4 shadow-lg w-full min-[1300px]:w-80 leading-8 tracking-normal h-full`}
+              } border-bidang-eksekutif p-4 shadow-lg w-full min-[1300px]:w-60 leading-8 tracking-normal h-full`}
               data-aos="zoom-in"
               data-aos-duration={duration(index)}
             >
@@ -41,7 +41,7 @@ export const BidangEksekutif = () => {
                   <img
                     src={item.icon}
                     alt="icon"
-                    className={`w-12 h-full ${
+                    className={`w-10 h-full ${
                       index % 3 === 0 ? "filter-dark-blue" : ""
                     }`}
                   />
@@ -53,7 +53,7 @@ export const BidangEksekutif = () => {
           ))}
         </div>
 
-        <div className="lg:w-2/5 mt-4 mb-4">
+        <div className="lg:w-2/5 w-2/3 mt-4 mb-4">
           <img
             src={img}
             alt="Keluarga Cemara"
