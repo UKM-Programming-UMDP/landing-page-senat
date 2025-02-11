@@ -7,7 +7,7 @@ export const UnitKegiatan = () => {
       id="Unit"
     >
       <h1
-        className="text-center text-3xl font-bold mb-10 mt-10"
+        className="text-center text-4xl font-bold mb-5 mt-10"
         data-aos="zoom-out"
         data-aos-duration="700"
       >
