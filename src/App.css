@@ -14,10 +14,6 @@
   border-color: #071e3d;
 }
 
-.text-dark-blue {
-  color: #071e3d;
-}
-
 .border-bidang-eksekutif {
   border-radius: 25px;
   border: 4px solid #071e3d;
@@ -38,11 +34,7 @@
 }
 
 .form-aspirasi {
-  height: 205vh;
-}
-
-.form-aspirasi-mobile {
-  height: 260vh;
+  height: 250vh;
 }
 
 .background-profile {

@@ -18,27 +18,28 @@ export const VisiMisi = () => {
   };
 
   return (
-    <section
-      id="visimisi"
-      className="overflow-hidden text-center lg:mx-32 pt-28"
-    >
-      {/* <h1
-        className="text-4xl font-bold mb-10"
+    <section id="visimisi" className="overflow-hidden text-center lg:mx-32">
+      <h1
+        className="text-5xl font-bold mb-10"
         data-aos="zoom-in"
         data-aos-duration="500"
       >
         VISI MISI
-      </h1> */}
+      </h1>
 
-      <div className="mx-8 bg-dark-blue border p-5 pt-3 rounded-3xl">
+      <div className="mx-8 bg-dark-blue border p-7 pt-3 rounded-3xl">
         <h1
-          className="text-2xl p-0 mb-2 font-bold"
-          // data-aos="zoom-in"
-          // data-aos-duration="500"
+          className="text-4xl p-0 my-3 font-bold"
+          data-aos="zoom-in"
+          data-aos-duration="500"
         >
           VISI
         </h1>
-        <div className="" data-aos="fade-up" data-aos-duration="500">
+        <div
+          className="text-xl my-5 tracking-widest"
+          data-aos="fade-up"
+          data-aos-duration="500"
+        >
           “Menciptakan serta menjadikan Senat mahasiswa sebagai lembaga yang
           interaktif kepada mahasiswa sehingga menjadi wadah untuk aspirasi,
           kolaborasi, belajar, berkembang dan berdinamika bagi seluruh mahasiswa
@@ -47,27 +48,27 @@ export const VisiMisi = () => {
       </div>
 
       <h1
-        className="text-2xl mt-5 font-bold text-dark-blue"
+        className="text-4xl my-5 font-bold"
         data-aos="fade-right"
         data-aos-duration="500"
       >
         MISI
       </h1>
 
-      <div className="flex flex-col gap-2 mt-2 md:text-base text-sm px-9">
+      <div className="flex flex-col gap-3 mt-8 md:pe-[8rem] md:text-xl text-sm">
         {listMisi.map((misi, index) => (
           <div
             key={index}
             className="flex md:gap-7 gap-5 items-center"
-            // data-aos="fade-left"
-            // data-aos-duration={duration(index)}
+            data-aos="fade-left"
+            data-aos-duration={duration(index)}
           >
-            <div className="md:flex border">
-              <span className="ms-auto rounded-full md:w-18 md:h-18 w-16 h-16 bg-dark-blue text-center flex items-center justify-center">
+            <div className="w-1/6 md:flex">
+              <span className="ms-auto rounded-full md:w-20 md:h-20 w-16 h-16 bg-dark-blue text-center flex items-center justify-center">
                 {index + 1}
               </span>
             </div>
-            <span className="md:min-h-[4.5rem] flex items-center w-full md:px-8 py-2 rounded-full border-4 border-dark-blue h-full text-left">
+            <span className="md:min-h-[5.9rem] flex items-center justify-center w-5/6 md:px-16 px-4 text-black rounded-full border-4 border-dark-blue h-full py-3">
               {misi}
             </span>
           </div>

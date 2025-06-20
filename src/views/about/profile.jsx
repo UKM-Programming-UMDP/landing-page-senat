@@ -24,10 +24,10 @@ export const Profile = () => {
           >
             <p className="text-base sm:text-lg md:text-2xl text-white mb-8 leading-relaxed sm:leading-[2.5rem] md:leading-[3rem] text-justify">
               Senat Mahasiswa UMDP adalah sebuah organisasi tertinggi sekaligus
-              memiliki otoritas tertinggi di ormawa di Universitas Multi Data
-              Palembang selayaknya (BEM) namun yang berperan sebagai lembaga
-              Eksekutif, Legislatif, dan Yudikatif serta yang menaungi langsung
-              seluruh organisasi mahasiswa UMDP seperti HMJ (Himpunan mahasiswa
+              memiliki otoritas tertinggi di ormawa di universitas multi data
+              palembang selayaknya (BEM) namun yang berperan sebagai lembaga
+              Eksekutif, Legislatif dan yudikatif serta yang menaungi langsung
+              seluruh Organisasi mahasiswa UMDP seperti HMJ (Himpunan mahasiswa
               Jurusan) dan UKM (Unit Kegiatan Mahasiswa). Maka Ketua Umum Senat
               bisa juga disebut juga dengan Presiden Mahasiswa.
             </p>
