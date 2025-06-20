@@ -26,7 +26,10 @@ const useWindowSize = () => {
     sm: windowWidth >= 640,
     md: windowWidth >= 768,
     lg: windowWidth >= 1024,
+    "2lg": windowWidth >= 1300,
+    "0.5xl": windowWidth >= 1024,
     xl: windowWidth >= 1280,
+    "1.5xl": windowWidth >= 1520,
     "2xl": windowWidth >= 1536,
     "3xl": windowWidth >= 1792,
   };
