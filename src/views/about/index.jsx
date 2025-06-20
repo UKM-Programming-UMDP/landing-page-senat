@@ -9,6 +9,7 @@ import { FullpageSection } from "@ap.cx/react-fullpage";
 
 export const About = () => {
   const listItems = [<Profile />, <Kabinet />, <VisiMisi />, <ProgramKerja />];
+
   return (
     <HelmetProvider>
       <Helmet>
