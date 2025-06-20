@@ -26,7 +26,9 @@ export const Grid = ({ array, ketuaPosition }) => {
   const ketuaComponent = (array) => (
     <div
       className={clsx(
-        "md:w-1/2 w-full rounded-3xl row-span-3 bg-dark-blue border-dark-blue border-8 text-center text-2xl font-semibold bg-cover bg-center flex items-end justify-center"
+        "w-full rounded-3xl row-span-3",
+        "bg-dark-blue border-dark-blue border-8 ",
+        "text-center text-2xl font-semibold bg-cover"
       )}
       style={{
         backgroundImage: `url(${array.image})`,
@@ -64,17 +66,20 @@ export const Grid = ({ array, ketuaPosition }) => {
   );
 
   const anggotaComponent = (array) => {
-    const anggotaCount = array?.anggota?.length;
     return (
       <div
-        className={`md:w-1/2 w-full grid gap-3 ${
-          anggotaCount === 2 ? "row-span-4" : "row-span-3"
-        } grid-cols-1 text-white`}
+        className={clsx(
+          array.anggota.length === 1
+            ? "flex flex-warp w-full h-full pb-2 justify-center items-center"
+            : "grid grid-col-2 grid-rows-4 gap-3 border"
+        )}
       >
         {array?.anggota?.map((anggota, idx) => (
           <div
             key={idx}
-            className="rounded-3xl bg-dark-blue border-8 bg-cover text-center border-dark-blue text-xl font-semibold flex items-end justify-center"
+            className={clsx(
+              "text-xl font-semibold text-center bg-cover border-8 row-span-4 h-full w-full  rounded-3xl bg-dark-blue border-dark-blue"
+            )}
             style={{
               backgroundImage: `url(${anggota?.image})`,
               aspectRatio: "1 / 0.54",
@@ -109,24 +114,22 @@ export const Grid = ({ array, ketuaPosition }) => {
   };
 
   return (
-    <div className="gap-3 text-white pt-28">
-      <div className="rounded-3xl col-span-2 bg-dark-blue text-center py-5 text-2xl font-semibold bg-cover bg-center flex items-center justify-center">
-        <div className="md:p-4">
+    <div className="flex flex-col items-center justify-center h-full gap-3 mt-10">
+      <div className="flex items-center justify-center w-[90%] row-start-1 text-2xl font-semibold text-center bg-center bg-cover rounded-3xl bg-dark-blue">
+        <div className=" md:p-4">
           <h1>Koordinator {array.divisi}</h1>
         </div>
       </div>
-      <div className="flex md:flex-nowrap flex-wrap mt-3 gap-4 items-center border text-dark pt-2 pb-5 ps-32 pe-32">
-        {ketuaPosition === "right" && md ? (
-          <Fragment>
-            {anggotaComponent(array)}
-            {ketuaComponent(array)}
-          </Fragment>
-        ) : (
-          <Fragment>
-            {ketuaComponent(array)}
-            {anggotaComponent(array)}
-          </Fragment>
-        )}
+
+      <div className="flex w-[90%] col-span-5 gap-4">
+        {(ketuaPosition === "right" && md
+          ? [anggotaComponent(array), ketuaComponent(array)]
+          : [ketuaComponent(array), anggotaComponent(array)]
+        ).map((component, index) => (
+          <div key={index} className="w-1/2 text-white">
+            {component}
+          </div>
+        ))}
       </div>
     </div>
   );

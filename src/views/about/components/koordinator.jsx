@@ -3,17 +3,17 @@ import { Grid } from "@components/grid/grid";
 import { FullpageSection } from "@ap.cx/react-fullpage";
 export const Koordinator = () => {
   return (
-    <section id="koordinator" className=" text-center lg:px-20 px-2">
-      <h1
-        className="text-5xl mb-6 font-bold"
+    <section id="koordinator" className="px-2 text-center lg:px-20">
+      {/* <h1
+        className="mb-6 text-5xl font-bold"
         data-aos="zoom-in"
         data-aos-duration="700"
       >
         KOORDINATOR
-      </h1>
-      <div className="grid gap-y-32 w-full max-w-screen-lg mx-auto ">
+      </h1> */}
+      <div className="grid w-full max-w-screen-lg mx-auto gap-y-32">
         <FullpageSection>
-          {/* <div className="flex gap-20 w-full"> */}
+          {/* <div className="flex w-full gap-20"> */}
           <Grid array={dataKoor.koorPsdm} ketuaPosition="left" />
           {/* <Grid array={dataKoor.koorHumas} ketuaPosition="left" /> */}
           {/* </div> */}
