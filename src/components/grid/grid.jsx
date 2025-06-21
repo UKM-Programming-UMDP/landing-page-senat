@@ -116,8 +116,10 @@ export const Grid = ({ array, ketuaPosition }) => {
   return (
     <div className="flex flex-col items-center justify-center h-full gap-3 mt-10">
       <div className="flex items-center justify-center w-[90%] row-start-1 text-2xl font-semibold text-center bg-center bg-cover rounded-3xl bg-dark-blue">
-        <div className=" md:p-4">
-          <h1>Koordinator {array.divisi}</h1>
+        <div className="md:p-4">
+          <h1 class="text-xl lg:text-2xl py-3 lg:py-1">
+            Koordinator {array.divisi}
+          </h1>
         </div>
       </div>
 

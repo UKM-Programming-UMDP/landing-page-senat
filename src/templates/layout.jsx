@@ -15,9 +15,8 @@ export const Layout = () => {
   return (
     <div className="relative w-full h-full">
       <Navbar />
-
       {isFullpageRoute ? (
-        <Fullpage.Wrapper>
+        <Fullpage>
           <FullpageNavigation />
           <FullPageSections>
             <Outlet />
@@ -25,7 +24,7 @@ export const Layout = () => {
               <Footer />
             </FullpageSection>
           </FullPageSections>
-        </Fullpage.Wrapper>
+        </Fullpage>
       ) : (
         <div className="content">
           <Outlet />

@@ -5,7 +5,7 @@ import { UnitKegiatan } from "./components/unitKegiatan";
 import { BidangEksekutif } from "./components/bidangEksekutif";
 import { FullpageSection } from "@ap.cx/react-fullpage";
 
-export const Home = ({ items }) => {
+export const Home = () => {
   const listItems = [
     <Jumbotron />,
     <KataSambutan />,

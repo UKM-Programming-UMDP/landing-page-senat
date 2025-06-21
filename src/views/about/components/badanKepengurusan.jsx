@@ -13,10 +13,10 @@ const BadanKepengurusan = () => {
               className="w-2/5 mr-4"
             />
             <div className="w-3/5 text-left md:leading-10">
-              <h1 className="my-3 font-semibold lg:text-5xl md:text-xl text:lg text">
+              <h1 className="my-3 text-2xl font-semibold lg:text-5xl md:text-xl">
                 {dataKepengurusan.ketua.name}
               </h1>
-              <h2 className="mb-4 text-3xl text-white lg:text-2xl md:text-lg">
+              <h2 className="mb-4 text-sm text-white lg:text-2xl md:text-lg">
                 Ketua Senat
               </h2>
               <p className="leading-7 text-gray-500 md:text-md">
@@ -29,10 +29,10 @@ const BadanKepengurusan = () => {
       <FullpageSection style={{ maxHeight: "100vh", overflow: "hidden" }}>
         <div className="relative flex items-center justify-center h-full gap-16 px-8 py-32 border lg:h-auto md:px-32">
           <div className="w-3/5 mr-4 text-right md:leading-10">
-            <h1 className="my-3 font-semibold lg:text-5xl md:text-xl text:lg text">
+            <h1 className="w-full my-3 text-2xl font-semibold lg:text-5xl md:text-xl">
               {dataKepengurusan.wakil.name}
             </h1>
-            <h2 className="mb-4 text-3xl lg:text-2xl md:text-lg">
+            <h2 className="mb-4 text-sm lg:text-2xl md:text-lg">
               Wakil Ketua Senat
             </h2>
             <p className="leading-7 text-gray-500 md:text-md">
@@ -57,12 +57,10 @@ const BadanKepengurusan = () => {
               className="w-1/2 mb-4"
             />
             <div className="w-4/5 text-center md:leading-10">
-              <h1 className="text-3xl font-semibold lg:text-4xl md:text-4xl">
-                Bendahara
-              </h1>
-              <h2 className="my-3 lg:text-2xl md:text-xl text:lg ">
+              <h2 className="my-3 text-xl font-bold lg:text-3xl md:text-xl">
                 {dataKepengurusan.bendahara.name}
               </h2>
+              <h1 className="text-lx lg:text-lg md:text-lg">Bendahara</h1>
             </div>
           </div>
           <div className="flex flex-col items-center my-10 lg:my-0">
@@ -72,12 +70,10 @@ const BadanKepengurusan = () => {
               className="w-1/2 mb-4 transform scale-x-[-1]"
             />
             <div className="w-4/5 text-center md:leading-10">
-              <h1 className="text-3xl font-semibold lg:text-4xl md:text-4xl">
-                Sekretaris
-              </h1>
-              <h2 className="my-3 lg:text-2xl md:text-xl text:lg">
-                {dataKepengurusan.sekretaris.name}nama
+              <h2 className="my-3 text-xl font-bold lg:text-3xl md:text-xl">
+                {dataKepengurusan.sekretaris.name}
               </h2>
+              <h1 className="text-lx lg:text-lg md:text-lg">Sekretaris</h1>
             </div>
           </div>
         </div>

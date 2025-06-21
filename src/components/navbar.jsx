@@ -47,9 +47,18 @@ export const Navbar = () => {
                 Home
               </a>
             </li>
-            <span className="items-center mx-auto text-center">
+            <li className="relative flex items-center justify-center h-full text-center">
+              <a
+                className="mx-5 hover:text-gray-400"
+                href="/about"
+                id="nav-home"
+              >
+                About
+              </a>
+            </li>
+            {/* <span className="items-center mx-auto text-center">
               <Dropdown label="About" listMenu={dataNavbar.about} />
-            </span>
+            </span> */}
             <span className="flex justify-center mx-auto">
               <Dropdown label="Contact" listMenu={dataNavbar.contact} />
             </span>

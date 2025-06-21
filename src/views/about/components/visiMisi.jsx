@@ -1,6 +1,4 @@
 const VisiMisi = () => {
-  // const duration = (index) => 500 + index * 300;
-
   const listMisi = [
     "Menciptakan hubungan internal yang menganut asas kekeluargaan yang bernafaskan profesionalisme.",
     "Menciptakan hubungan yang erat dengan organisasi eksternal di luar kampus MDP.",
@@ -37,7 +35,7 @@ const VisiMisi = () => {
         MISI
       </h1>
 
-      <div className="flex flex-col gap-2 px-4 mt-2 text-xs md:text-base md:px-9">
+      <div className="flex flex-col gap-1 px-4 mt-2 text-xs md:text-base md:px-9">
         {listMisi.map((misi, index) => (
           <div
             key={index}
