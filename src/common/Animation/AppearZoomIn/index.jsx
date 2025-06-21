@@ -8,8 +8,9 @@ const AppearZoomIn = ({
   delay = 0,
   scaleStart = 0.5,
   threshold = 0.2,
+  triggerOnce = false,
 }) => {
-  const [ref, inView] = useInView({ triggerOnce: false, threshold });
+  const [ref, inView] = useInView({ triggerOnce: triggerOnce, threshold });
 
   return (
     <div ref={ref}>
