@@ -1,5 +1,6 @@
 import orang from "@assets/figure-jumbotron.png";
 import AppearZoomIn from "@common/Animation/AppearZoomIn";
+import { Link } from "react-router-dom";
 
 const Jumbotron = () => {
   return (
@@ -16,15 +17,15 @@ const Jumbotron = () => {
                 mahasiswa yang menaungi Unit Kegiatan Mahasiswa (UKM) yang ada
                 di lingkungan Universitas MDP.
               </p>
-              <div className="mx-auto my-10 lg:mx-0">
-                <a
+              <div className="z-10 mx-auto my-10 lg:mx-0">
+                <Link
                   className="w-full p-3 text-white rounded-full cursor-pointer btn"
                   style={{ backgroundColor: "#1f4287" }}
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSd1UfOyXQuY6JdEVT-3DHZQgTRoxiKEOEe9qWcru6NN0CuQqA/viewform?usp=sf_link"
+                  to="/contact/form-aspirasi"
                   target="_blank"
                 >
                   Form Sema Confess
-                </a>
+                </Link>
               </div>
             </>
           </AppearZoomIn>
