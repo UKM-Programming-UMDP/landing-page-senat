@@ -49,14 +49,14 @@ export const Navbar = () => {
             </li>
             <li className="relative flex items-center justify-center h-full text-center">
               <a
-                className="mx-5 hover:text-gray-400"
+                className="ms-5 me-9 hover:text-gray-400"
                 href="/about"
                 id="nav-home"
               >
                 About
               </a>
             </li>
-            <span className="flex justify-center mx-auto">
+            <span className="flex justify-center mx-5">
               <Dropdown label="Contact" listMenu={dataNavbar.contact} />
             </span>
           </ul>
