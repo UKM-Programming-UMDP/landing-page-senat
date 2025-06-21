@@ -2,15 +2,15 @@ export const dataNavbar = {
   about: [
     {
       name: "Profile",
-      link: "#profile",
+      link: "#0",
     },
     {
       name: "Kabinet",
-      link: "#kabinet",
+      link: "#1",
     },
     {
       name: "Visi Misi",
-      link: "#visimisi",
+      link: "#2",
     },
     {
       name: "Badan Kepengurusan",

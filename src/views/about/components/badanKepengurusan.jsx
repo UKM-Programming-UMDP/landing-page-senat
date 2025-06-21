@@ -1,55 +1,51 @@
 import { dataKepengurusan } from "@content/about/dataKepengurusan";
 import { FullpageSection } from "@ap.cx/react-fullpage";
-export const BadanKepengurusan = () => {
+import AppearFadeRight from "@common/Animation/AppearFadeRight";
+import AppearFadeLeft from "@common/Animation/AppearFadeLeft";
+import AppearFadeIn from "@common/Animation/AppearFadeIn";
+
+const BadanKepengurusan = () => {
   return (
     <>
-      <section id="kepengurusan" className="text-center overflow-hidden">
-        <FullpageSection>
-          <div className="p-6 bg-dark-blue md:px-32 py-32">
-            <div className="flex items-center lg:gap-16 gap-6">
+      <FullpageSection style={{ height: "100vh", overflow: "hidden" }}>
+        <div className="h-full p-6 py-32 lg:h-auto lg:py-16 bg-dark-blue md:px-32">
+          <AppearFadeRight delay="0.3">
+            <div className="flex items-center gap-6 mt-10 lg:gap-16">
               <img
                 src={dataKepengurusan.ketua.image}
                 alt="Gambar"
                 className="w-2/5 mr-4"
-                data-aos="fade-right"
-                data-aos-duration="500"
               />
-              <div
-                className="w-3/5 text-left md:leading-10"
-                data-aos="fade-left"
-                data-aos-duration="500"
-              >
-                <h1 className="lg:text-5xl md:text-xl text:lg my-3 font-semibold text">
+              <div className="w-3/5 text-left md:leading-10">
+                <h1 className="my-3 text-2xl font-semibold lg:text-5xl md:text-xl">
                   {dataKepengurusan.ketua.name}
                 </h1>
-                <h2 className="lg:text-2xl md:text-lg text-3xl mb-4">
+                <h2 className="mb-4 text-sm text-white lg:text-2xl md:text-lg">
                   Ketua Senat
                 </h2>
-                <p className="md:text-md text-gray-500 leading-7">
+                <p className="leading-7 text-gray-500 md:text-md">
                   {dataKepengurusan.ketua.descriptions}
                 </p>
               </div>
             </div>
-          </div>
-        </FullpageSection>
-        <FullpageSection>
-          <div className="flex relative items-center md:px-32 px-8 py-32 gap-16">
-            <div
-              className="w-3/5 text-right md:leading-10 mr-4"
-              data-aos="fade-right"
-              data-aos-duration="600"
-            >
-              <h1 className="lg:text-5xl md:text-xl text:lg my-3 font-semibold text">
+          </AppearFadeRight>
+        </div>
+      </FullpageSection>
+      <FullpageSection style={{ maxHeight: "100vh", overflow: "hidden" }}>
+        <AppearFadeLeft delay="0.3">
+          <div className="relative flex items-center justify-center h-full gap-16 px-8 py-32 lg:h-auto md:px-32">
+            <div className="w-3/5 h-full mr-4 text-right md:leading-10">
+              <h1 className="w-full my-3 text-2xl font-semibold lg:text-5xl md:text-xl">
                 {dataKepengurusan.wakil.name}
               </h1>
-              <h2 className="lg:text-2xl md:text-lg text-3xl mb-4">
+              <h2 className="mb-4 text-sm lg:text-2xl md:text-lg">
                 Wakil Ketua Senat
               </h2>
-              <p className="md:text-md text-gray-500 leading-7">
+              <p className="leading-7 text-gray-500 md:text-md">
                 {dataKepengurusan.wakil.descriptions}
               </p>
             </div>
-            <div className="w-2/5" data-aos="fade-left" data-aos-duration="600">
+            <div className="w-2/5">
               <img
                 src={dataKepengurusan.wakil.image}
                 alt="Gambar"
@@ -57,50 +53,43 @@ export const BadanKepengurusan = () => {
               />
             </div>
           </div>
-        </FullpageSection>
-        <FullpageSection>
-          <div className="flex md:flex-row flex-col py-32 items-center justify-center text-center p-6 bg-dark-blue">
-            <div
-              className="flex flex-col items-center"
-              data-aos="fade-right"
-              data-aos-duration="500"
-            >
+        </AppearFadeLeft>
+      </FullpageSection>
+      <FullpageSection style={{ height: "100vh", overflow: "hidden" }}>
+        <div className="flex flex-row items-center justify-center h-full p-10 py-32 text-center lg:p-32 lg:mt-8 md:flex-row bg-dark-blue">
+          <AppearFadeIn delay="0.3">
+            <div className="flex flex-col items-center">
               <img
                 src={dataKepengurusan.bendahara.image}
                 alt="Gambar"
                 className="w-1/2 mb-4"
               />
-              <div className="w-4/5 md:leading-10 text-center">
-                <h1 className="lg:text-4xl md:text-4xl text-3xl font-semibold">
-                  Bendahara
-                </h1>
-                <h2 className="lg:text-2xl md:text-xl text:lg my-3 ">
+              <div className="w-4/5 text-center md:leading-10">
+                <h2 className="my-3 text-xl font-bold lg:text-3xl md:text-xl">
                   {dataKepengurusan.bendahara.name}
                 </h2>
+                <h1 className="text-lx lg:text-lg md:text-lg">Bendahara</h1>
               </div>
             </div>
-            <div
-              className="flex flex-col items-center lg:my-0 my-10"
-              data-aos="fade-left"
-              data-aos-duration="500"
-            >
+          </AppearFadeIn>
+          <AppearFadeIn delay="0.5">
+            <div className="flex flex-col items-center my-10 lg:my-0">
               <img
                 src={dataKepengurusan.sekretaris.image}
                 alt="Gambar"
                 className="w-1/2 mb-4 transform scale-x-[-1]"
               />
-              <div className="w-4/5 md:leading-10 text-center">
-                <h1 className="lg:text-4xl md:text-4xl text-3xl font-semibold">
-                  Sekretaris
-                </h1>
-                <h2 className="lg:text-2xl md:text-xl text:lg my-3">
+              <div className="w-4/5 text-center md:leading-10">
+                <h2 className="my-3 text-xl font-bold lg:text-3xl md:text-xl">
                   {dataKepengurusan.sekretaris.name}
                 </h2>
+                <h1 className="text-lx lg:text-lg md:text-lg">Sekretaris</h1>
               </div>
             </div>
-          </div>
-        </FullpageSection>
-      </section>
+          </AppearFadeIn>
+        </div>
+      </FullpageSection>
     </>
   );
 };
+export default BadanKepengurusan;
