@@ -3,7 +3,6 @@ import { Navbar } from "@components/navbar";
 import { Footer } from "@components/footer";
 import Fullpage, {
   FullPageSections,
-  FullpageNavigation,
   FullpageSection,
 } from "@ap.cx/react-fullpage";
 
