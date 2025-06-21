@@ -21,7 +21,7 @@ export const anggotaKoordinator = () => {
   ];
 
   const anggotaMulmed = [
-    { name: "Muhammad Aldiansyah", image: anggotamulmed1, divisi: "Mulmed" }, 
+    { name: "Muhammad Aldiansyah", image: anggotamulmed1, divisi: "Mulmed" },
   ];
 
   return {

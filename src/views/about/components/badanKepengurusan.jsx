@@ -33,8 +33,8 @@ const BadanKepengurusan = () => {
       </FullpageSection>
       <FullpageSection style={{ maxHeight: "100vh", overflow: "hidden" }}>
         <AppearFadeLeft delay="0.3">
-          <div className="relative flex items-center justify-center h-full gap-16 px-8 py-32 border lg:h-auto md:px-32">
-            <div className="w-3/5 mr-4 text-right md:leading-10">
+          <div className="relative flex items-center justify-center h-full gap-16 px-8 py-32 lg:h-auto md:px-32">
+            <div className="w-3/5 h-full mr-4 text-right md:leading-10">
               <h1 className="w-full my-3 text-2xl font-semibold lg:text-5xl md:text-xl">
                 {dataKepengurusan.wakil.name}
               </h1>

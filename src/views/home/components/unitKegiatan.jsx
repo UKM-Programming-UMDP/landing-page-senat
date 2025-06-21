@@ -1,9 +1,30 @@
+import { useEffect, useState } from "react";
 import ukm from "@assets/figure-UKM.png";
 import { dataUnitKegiatan } from "@content/home/dataUnitKegiatan";
 import AppearFadeLeft from "@common/Animation/AppearFadeLeft";
 import AppearFadeRight from "@common/Animation/AppearFadeRight";
 
 const UnitKegiatan = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const RightOrLeft = (props) =>
+    isSmallScreen ? (
+      <AppearFadeLeft {...props} />
+    ) : (
+      <AppearFadeRight {...props} />
+    );
+
   return (
     <div
       className="h-full pt-16 overflow-x-hidden pb-35 lg:h-auto lg:pe-10 lg:ps-10 pe-3 ps-3"
@@ -35,6 +56,7 @@ const UnitKegiatan = () => {
               </div>
             </div>
           </AppearFadeLeft>
+
           <AppearFadeLeft delay="0.5">
             <div className="items-center justify-center hidden w-full mt-4 mb-4 lg:flex">
               <img
@@ -44,7 +66,8 @@ const UnitKegiatan = () => {
               />
             </div>
           </AppearFadeLeft>
-          <AppearFadeLeft delay="0.7">
+
+          <AppearFadeLeft delay={isSmallScreen ? "0.3" : "0.7"}>
             <h3 className="mt-3 mb-3 text-xl font-bold">UKM KEAGAMAAN</h3>
             <div className="p-3 mt-3 mb-3 bg-gray-100 rounded-lg card-unit">
               <ul className="pl-5 text-sm list-disc sm:text-base">
@@ -57,8 +80,9 @@ const UnitKegiatan = () => {
             </div>
           </AppearFadeLeft>
         </div>
+
         <div className="h-full lg:w-1/2">
-          <AppearFadeRight delay="0.3">
+          <RightOrLeft delay={isSmallScreen ? "0.5" : "0.3"}>
             <h3 className="mb-3 text-xl font-bold">HIMPUNAN MAHASISWA</h3>
             <div className="p-3 mt-3 mb-3 bg-gray-100 rounded-lg card-unit lg:mb-8">
               <ul className="list-disc flex flex-wrap gap-1 pl-4 sm:text-base text-sm min-[1250px]:flex-row flex-col">
@@ -71,9 +95,9 @@ const UnitKegiatan = () => {
                 )}
               </ul>
             </div>
-          </AppearFadeRight>
+          </RightOrLeft>
 
-          <AppearFadeRight delay="0.5">
+          <RightOrLeft delay="0.5">
             <h3 className="mb-3 text-xl font-bold">UKM LAINNYA</h3>
             <div className="p-3 mb-4 bg-gray-100 rounded-lg card-unit lg:mb-8">
               <ul className="list-disc flex flex-wrap gap-1 pl-4 sm:text-base text-sm min-[1250px]:flex-row flex-col">
@@ -84,9 +108,9 @@ const UnitKegiatan = () => {
                 ))}
               </ul>
             </div>
-          </AppearFadeRight>
+          </RightOrLeft>
 
-          <AppearFadeRight delay="0.7">
+          <RightOrLeft delay="0.7">
             <h3 className="mt-2 text-xl font-bold">UKM OLAHRAGA</h3>
             <div className="h-full p-3 mt-3 bg-gray-100 rounded-lg card-unit">
               <ul className="list-disc flex flex-wrap gap-1 pl-4 sm:text-base text-sm min-[1250px]:flex-row flex-col">
@@ -97,10 +121,11 @@ const UnitKegiatan = () => {
                 ))}
               </ul>
             </div>
-          </AppearFadeRight>
+          </RightOrLeft>
         </div>
       </div>
     </div>
   );
 };
+
 export default UnitKegiatan;

@@ -1,7 +1,6 @@
 import { dataKoor } from "@content/about/dataKepengurusan";
 import { Grid } from "@components/grid/grid";
 import { FullpageSection } from "@ap.cx/react-fullpage";
-import AppearFadeIn from "@common/Animation/AppearFadeIn";
 
 export const Koordinator = () => {
   const componentCoordinator = [

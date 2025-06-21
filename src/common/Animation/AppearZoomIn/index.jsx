@@ -16,7 +16,7 @@ const AppearZoomIn = ({
       <AnimatePresence mode="wait">
         {inView && (
           <motion.div
-            key={`zoom-${inView}-${Date.now()}`}
+            key={`zoom-${inView}`}
             className={className}
             initial={{ opacity: 0, scale: scaleStart }}
             animate={{

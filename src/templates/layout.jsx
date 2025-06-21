@@ -17,7 +17,6 @@ export const Layout = () => {
       <Navbar />
       {isFullpageRoute ? (
         <Fullpage>
-          <FullpageNavigation />
           <FullPageSections>
             <Outlet />
             <FullpageSection data-section="99">

@@ -1,5 +1,6 @@
 import bgMdp from "@assets/mdp.webp";
 import AppearZoomIn from "@common/Animation/AppearZoomIn";
+
 const Profile = () => {
   return (
     <>
@@ -33,4 +34,5 @@ const Profile = () => {
     </>
   );
 };
+
 export default Profile;

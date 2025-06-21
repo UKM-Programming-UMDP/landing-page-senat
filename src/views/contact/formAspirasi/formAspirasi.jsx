@@ -1,6 +1,6 @@
 import { HelmetProvider, Helmet } from "react-helmet-async";
 import useWindowSize from "@common/hooks/useWindowSize";
-import AppearZoomIn from "../../../common/Animation/AppearZoomIn";
+import AppearZoomIn from "@common/Animation/AppearZoomIn";
 
 export const FormAspirasi = () => {
   const windowSize = useWindowSize();

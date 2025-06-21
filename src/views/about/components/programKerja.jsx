@@ -14,7 +14,6 @@ import AppearZoomIn from "@common/Animation/AppearZoomIn";
 import AppearFadeIn from "@common/Animation/AppearFadeIn";
 
 const ProgramKerja = () => {
-  const duration = (index) => 500 + index * 300;
   const listProker = [
     {
       proker: "SEMA Confess & SEMA Bicara Issue",
@@ -49,39 +48,39 @@ const ProgramKerja = () => {
             <img src={img1} alt="icon" />
           </AppearZoomIn>
         </div>
-        <Swiper
-          effect="cards"
-          grabCursor={true}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          navigation
-          modules={[EffectCards, Navigation, Pagination]}
-          cardsEffect={{
-            slideShadows: false,
-            perSlideOffset: 10,
-          }}
-          className="flex items-center justify-center w-full py-24 mx-5 lg:w-1/2"
-        >
-          <AppearZoomIn delay="0.5">
-            {listProker.map((proker, index) => (
-              <SwiperSlide
-                key={index}
-                className="flex items-center justify-center h-48 shadow-none swiper-slide-active:shadow-lg"
-              >
-                <div className="border-4 shadow-[0_0_20px_rgba(0,0,0,0.3)] border-dark-blue rounded-xl p-6 bg-white w-72 h-80 flex flex-col items-center justify-center">
-                  <img
-                    src={proker.icon}
-                    alt="icon"
-                    className="w-24 h-24 mb-3"
-                  />
-                  <h3 className="text-lg font-bold text-center">
-                    {proker.proker}
-                  </h3>
-                </div>
-              </SwiperSlide>
-            ))}
-          </AppearZoomIn>
-        </Swiper>
+        <AppearZoomIn delay={0.2}>
+          <div className="flex items-center justify-center w-full h-full">
+            <Swiper
+              effect="cards"
+              grabCursor={true}
+              slidesPerView={1}
+              modules={[EffectCards]}
+              cardsEffect={{
+                slideShadows: false,
+                perSlideOffset: 10,
+              }}
+              className="w-full max-w-lg h-[350px] px-10"
+            >
+              {listProker.map((proker, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="flex items-center justify-center h-48 mt-20"
+                >
+                  <div className="border-4 shadow-[0_0_20px_rgba(0,0,0,0.3)] border-dark-blue rounded-xl p-6 bg-white w-72 h-80 flex flex-col items-center justify-center">
+                    <img
+                      src={proker.icon}
+                      alt="icon"
+                      className="w-24 h-24 mb-3"
+                    />
+                    <h3 className="text-lg font-bold text-center">
+                      {proker.proker}
+                    </h3>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </AppearZoomIn>
       </div>
     </section>
   );
