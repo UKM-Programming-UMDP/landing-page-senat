@@ -27,13 +27,7 @@ const VisiMisi = () => {
         </div>
       </div>
 
-      <h1
-        className="mt-5 text-2xl font-bold text-dark-blue"
-        data-aos="fade-right"
-        data-aos-duration="500"
-      >
-        MISI
-      </h1>
+      <h1 className="mt-5 text-2xl font-bold text-dark-blue">MISI</h1>
 
       <div className="flex flex-col gap-1 px-4 mt-2 text-xs md:text-base md:px-9">
         {listMisi.map((misi, index) => (

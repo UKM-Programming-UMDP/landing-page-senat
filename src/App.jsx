@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { Layout } from "./templates/layout";
 import { Home } from "./views/home";
 import { ErrorPage } from "./views/ErorrPage";
@@ -10,7 +8,6 @@ import { Sosmed } from "./views/contact/medsos/medsos";
 import { FormAspirasi } from "./views/contact/formAspirasi/formAspirasi";
 
 function App() {
-  AOS.init();
   return (
     <BrowserRouter>
       <Routes>
