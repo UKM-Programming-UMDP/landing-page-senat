@@ -1,5 +1,7 @@
 import ukm from "@assets/figure-UKM.png";
 import { dataUnitKegiatan } from "@content/home/dataUnitKegiatan";
+import AppearFadeLeft from "@common/Animation/AppearFadeLeft";
+// import AppearFadeRight from "@common/Animation/AppearFadeRight";
 
 const UnitKegiatan = () => {
   return (
@@ -17,7 +19,7 @@ const UnitKegiatan = () => {
 
       <div className="flex flex-col justify-center gap-8 px-10 mt-4 mb-4 lg:flex-row lg:px-0 md:px-16">
         <div className="lg:w-1/2">
-          <div>
+          <AppearFadeLeft delay="0.3">
             <h3 className="text-xl font-bold">UKM KESENIAN</h3>
             <div className="p-3 mt-3 bg-gray-100 rounded-lg card-unit">
               <div className="flex text-base">
@@ -32,7 +34,7 @@ const UnitKegiatan = () => {
                 </ul>
               </div>
             </div>
-          </div>
+          </AppearFadeLeft>
           <div className="items-center justify-center hidden w-full mt-4 mb-4 lg:flex">
             <img
               src={ukm}

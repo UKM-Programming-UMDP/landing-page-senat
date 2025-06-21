@@ -6,7 +6,7 @@ const Jumbotron = () => {
     <div className="h-screen overflow-hidden text-white bg-center bg-cover border-none jumbotron bg-dark-blue lg:px-5 lg:pt-16 pt-28">
       <div className="flex gap-2 ps-10 pe-10 items-center min-[1300px]:pt-28">
         <div className="flex flex-col gap-8 jumbotron-text lg:w-3/5">
-          <AppearZoomIn delay="0.6">
+          <AppearZoomIn delay="0.6" className="flex flex-col w-full">
             <>
               <h1 className="w-full text-4xl font-extrabold text-center text-white md:text-5xl lg:text-left lg:text-6xl">
                 SENAT MAHASISWA UNIVERSITAS MDP
@@ -29,7 +29,7 @@ const Jumbotron = () => {
             </>
           </AppearZoomIn>
         </div>
-        <div className="relative aspect-[4/3] overflow-hidden lg:block md:hidden md:w-1/2 lg:w-3/5 sm:w-2/5">
+        <div className="relative aspect-[4/3] overflow-hidden lg:block hidden md:w-1/2 lg:w-3/5 sm:w-2/5">
           <AppearZoomIn>
             <img
               src={orang}
