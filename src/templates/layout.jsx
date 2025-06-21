@@ -1,9 +1,9 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { Navbar } from "@components/navbar";
 import { Footer } from "@components/footer";
-import React from "react";
 import Fullpage, {
   FullPageSections,
+  FullpageNavigation,
   FullpageSection,
 } from "@ap.cx/react-fullpage";
 
@@ -15,15 +15,17 @@ export const Layout = () => {
   return (
     <div className="relative w-full h-full">
       <Navbar />
+
       {isFullpageRoute ? (
-        <Fullpage>
+        <Fullpage.Wrapper>
+          <FullpageNavigation />
           <FullPageSections>
             <Outlet />
-            <FullpageSection>
+            <FullpageSection data-section="99">
               <Footer />
             </FullpageSection>
           </FullPageSections>
-        </Fullpage>
+        </Fullpage.Wrapper>
       ) : (
         <div className="content">
           <Outlet />

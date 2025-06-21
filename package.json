@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@ap.cx/react-fullpage": "^0.3.0",
-    "@fullpage/react-fullpage": "^0.1.47",
+    "@fullpage/react-fullpage": "^0.1.48",
     "@headlessui/react": "^2.1.10",
     "aos": "^2.3.4",
     "clsx": "^2.1.1",

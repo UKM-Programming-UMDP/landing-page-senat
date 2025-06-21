@@ -5,14 +5,19 @@ import { Dropdown } from "@common/components/dropdown";
 
 export const Navbar = () => {
   const [toggler, setToggler] = useState(false);
+
   return (
-    <nav className="bg-dark-blue fixed w-full ps-10 pe-10 shadow-lg z-50">
-      <div className="container mx-auto flex items-center justify-between">
-        <a className="flex-shrink-0" href="#">
+    <nav className="fixed z-50 w-full shadow-lg bg-dark-blue ps-10 pe-10">
+      <div className="container flex items-center justify-between mx-auto">
+        <a
+          className="flex-shrink-0"
+          href="#"
+          onClick={() => fullpageApi.scrollTo(0)}
+        >
           <img src={img} width="100px" alt="logo" />
         </a>
         <button
-          className="block lg:hidden text-white focus:outline-none"
+          className="block text-white lg:hidden focus:outline-none"
           aria-label="Toggle navigation"
           onClick={() => setToggler(!toggler)}
         >
@@ -36,16 +41,16 @@ export const Navbar = () => {
             toggler ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
           } lg:max-h-full lg:opacity-100`}
         >
-          <ul className="flex flex-col h-full lg:flex-row lg:ml-auto space-y-2 lg:space-y-0 lg:space-x-4 p-4 lg:p-0">
-            <li className="relative h-full items-center text-center flex justify-center">
-              <a className="hover:text-gray-400 mx-5" href="/" id="nav-home">
+          <ul className="flex flex-col h-full p-4 space-y-2 lg:flex-row lg:ml-auto lg:space-y-0 lg:space-x-4 lg:p-0">
+            <li className="relative flex items-center justify-center h-full text-center">
+              <a className="mx-5 hover:text-gray-400" href="/" id="nav-home">
                 Home
               </a>
             </li>
-            <span className="mx-auto items-center text-center">
+            <span className="items-center mx-auto text-center">
               <Dropdown label="About" listMenu={dataNavbar.about} />
             </span>
-            <span className="mx-auto flex justify-center">
+            <span className="flex justify-center mx-auto">
               <Dropdown label="Contact" listMenu={dataNavbar.contact} />
             </span>
           </ul>
