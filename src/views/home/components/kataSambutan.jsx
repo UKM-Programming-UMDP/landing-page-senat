@@ -9,7 +9,7 @@ const KataSambutan = () => {
       id="kataSambutan"
     >
       <div className="flex items-center justify-center gap-10 px-10 mt-20 ">
-        <div className="lg:w-1/4 w-[30%]">
+        <div className="hidden md:block lg:w-1/4 w-[30%]">
           <AppearZoomIn delay="0.1">
             <img src={fotoSenat} alt="foto senat" className="w-full" />
           </AppearZoomIn>

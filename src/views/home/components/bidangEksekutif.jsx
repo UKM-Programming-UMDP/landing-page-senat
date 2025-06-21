@@ -1,7 +1,6 @@
 import img from "@assets/foto-senat-2024.png";
 import { dataEksekutif } from "@content/home/dataEksekutif";
 import AppearZoomIn from "@common/Animation/AppearZoomIn";
-import AppearFadeIn from "@common/Animation/AppearFadeIn";
 
 const BidangEksekutif = () => {
   return (
@@ -15,7 +14,7 @@ const BidangEksekutif = () => {
       <div className="flex flex-col-reverse min-[1300px]:flex-row mt-1 mb-3 justify-center items-center">
         <div className="flex flex-wrap justify-center items-center gap-4 min-[1300px]:w-1/2 min-[1420px]:w-50 mt-4 mb-4 xl:p-0 sm:p-24 p-6">
           {dataEksekutif.map((item, index) => (
-            <AppearZoomIn delay={index * 0.2}>
+            <AppearZoomIn key={index} delay={index * 0.2}>
               <div
                 key={index}
                 className={`card-eksekutif text-black ${

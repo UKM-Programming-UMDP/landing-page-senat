@@ -1,8 +1,7 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
 
-const AppeaFadeRight = ({
+const AppearFadeRight = ({
   children,
   className,
   duration = 0.3,
@@ -12,32 +11,21 @@ const AppeaFadeRight = ({
   threshold = 0.2,
 }) => {
   const [ref, inView] = useInView({ triggerOnce, threshold });
-  const [trigger, setTrigger] = useState(false);
-
-  useEffect(() => {
-    if (inView) {
-      setTrigger(true);
-    } else if (!triggerOnce) {
-      setTrigger(false);
-    }
-  }, [inView, triggerOnce]);
 
   return (
-    <div ref={ref}>
-      <AnimatePresence>
-        {trigger && (
-          <motion.div
-            className={className}
-            initial={{ x: offset, opacity: 0 }}
-            animate={{ x: 0, opacity: 1, transition: { delay, duration } }}
-            exit={{ x: offset, opacity: 0 }}
-          >
-            {children}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+    <motion.div
+      ref={ref}
+      className={className}
+      initial={{ x: offset, opacity: 0 }}
+      animate={{
+        x: inView ? 0 : offset,
+        opacity: inView ? 1 : 0,
+        transition: { delay, duration },
+      }}
+    >
+      {children}
+    </motion.div>
   );
 };
 
-export default AppeaFadeRight;
+export default AppearFadeRight;

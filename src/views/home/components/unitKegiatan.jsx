@@ -1,7 +1,7 @@
 import ukm from "@assets/figure-UKM.png";
 import { dataUnitKegiatan } from "@content/home/dataUnitKegiatan";
 import AppearFadeLeft from "@common/Animation/AppearFadeLeft";
-// import AppearFadeRight from "@common/Animation/AppearFadeRight";
+import AppearFadeRight from "@common/Animation/AppearFadeRight";
 
 const UnitKegiatan = () => {
   return (
@@ -35,14 +35,16 @@ const UnitKegiatan = () => {
               </div>
             </div>
           </AppearFadeLeft>
-          <div className="items-center justify-center hidden w-full mt-4 mb-4 lg:flex">
-            <img
-              src={ukm}
-              className="max-[1086px]:w-[57%] max-[1150px]:w-[56%] max-[1200px]:w-[52%] max-[1300px]:w-[48%] xl:w-[27.5%] max-[1250px]:w-[63%]"
-              alt="image"
-            />
-          </div>
-          <div>
+          <AppearFadeLeft delay="0.5">
+            <div className="items-center justify-center hidden w-full mt-4 mb-4 lg:flex">
+              <img
+                src={ukm}
+                className="max-[1086px]:w-[57%] max-[1150px]:w-[56%] max-[1200px]:w-[52%] max-[1300px]:w-[48%] xl:w-[27.5%] max-[1250px]:w-[63%]"
+                alt="image"
+              />
+            </div>
+          </AppearFadeLeft>
+          <AppearFadeLeft delay="0.7">
             <h3 className="mt-3 mb-3 text-xl font-bold">UKM KEAGAMAAN</h3>
             <div className="p-3 mt-3 mb-3 bg-gray-100 rounded-lg card-unit">
               <ul className="pl-5 text-sm list-disc sm:text-base">
@@ -53,10 +55,10 @@ const UnitKegiatan = () => {
                 )}
               </ul>
             </div>
-          </div>
+          </AppearFadeLeft>
         </div>
         <div className="h-full lg:w-1/2">
-          <div>
+          <AppearFadeRight delay="0.3">
             <h3 className="mb-3 text-xl font-bold">HIMPUNAN MAHASISWA</h3>
             <div className="p-3 mt-3 mb-3 bg-gray-100 rounded-lg card-unit lg:mb-8">
               <ul className="list-disc flex flex-wrap gap-1 pl-4 sm:text-base text-sm min-[1250px]:flex-row flex-col">
@@ -69,9 +71,9 @@ const UnitKegiatan = () => {
                 )}
               </ul>
             </div>
-          </div>
+          </AppearFadeRight>
 
-          <div>
+          <AppearFadeRight delay="0.5">
             <h3 className="mb-3 text-xl font-bold">UKM LAINNYA</h3>
             <div className="p-3 mb-4 bg-gray-100 rounded-lg card-unit lg:mb-8">
               <ul className="list-disc flex flex-wrap gap-1 pl-4 sm:text-base text-sm min-[1250px]:flex-row flex-col">
@@ -82,9 +84,9 @@ const UnitKegiatan = () => {
                 ))}
               </ul>
             </div>
-          </div>
+          </AppearFadeRight>
 
-          <div>
+          <AppearFadeRight delay="0.7">
             <h3 className="mt-2 text-xl font-bold">UKM OLAHRAGA</h3>
             <div className="h-full p-3 mt-3 bg-gray-100 rounded-lg card-unit">
               <ul className="list-disc flex flex-wrap gap-1 pl-4 sm:text-base text-sm min-[1250px]:flex-row flex-col">
@@ -95,7 +97,7 @@ const UnitKegiatan = () => {
                 ))}
               </ul>
             </div>
-          </div>
+          </AppearFadeRight>
         </div>
       </div>
     </div>

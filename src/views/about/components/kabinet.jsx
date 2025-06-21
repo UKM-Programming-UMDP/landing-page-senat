@@ -1,6 +1,7 @@
 import logoKabinet from "@assets/logo-kabinet.png";
 import { Fragment } from "react";
 import useWindowSize from "@common/hooks/useWindowSize";
+import AppearFadeIn from "@common/Animation/AppearFadeIn";
 
 const Kabinet = () => {
   const windowSize = useWindowSize();
@@ -57,31 +58,35 @@ const Kabinet = () => {
           windowSize["2lg"] ? "" : "md:p-20"
         }`}
       >
-        <h1
-          className={`font-bold text-center pt-[25%] lg:pt-0 lg:mb-10 ${
-            windowSize["2lg"] ? "text-5xl" : "text-3xl sm:text-4xl"
-          }`}
-        >
-          Kabinet Sahakarya
-        </h1>
-        <div className="px-8 lg:px-32 sm:px-16">
-          <div
-            className={`flex ${
-              windowSize["2lg"] ? "flex-nowrap" : "flex-wrap"
-            } mt-3 items-stretch`}
+        <AppearFadeIn delay="0.1">
+          <h1
+            className={`font-bold text-center pt-[25%] lg:pt-0 lg:mb-10 ${
+              windowSize["2lg"] ? "text-5xl" : "text-3xl sm:text-4xl"
+            }`}
           >
-            {windowSize["2lg"] ? (
-              <Fragment>
-                {Description()}
-                {Image()}
-              </Fragment>
-            ) : (
-              <Fragment>
-                {Image()}
-                {Description()}
-              </Fragment>
-            )}
-          </div>
+            Kabinet Sahakarya
+          </h1>
+        </AppearFadeIn>
+        <div className="px-8 lg:px-32 sm:px-16">
+          <AppearFadeIn delay="0.3">
+            <div
+              className={`flex ${
+                windowSize["2lg"] ? "flex-nowrap" : "flex-wrap"
+              } mt-3 items-stretch`}
+            >
+              {windowSize["2lg"] ? (
+                <Fragment>
+                  {Description()}
+                  {Image()}
+                </Fragment>
+              ) : (
+                <Fragment>
+                  {Image()}
+                  {Description()}
+                </Fragment>
+              )}
+            </div>
+          </AppearFadeIn>
         </div>
       </section>
     </>

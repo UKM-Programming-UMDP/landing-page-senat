@@ -71,7 +71,7 @@ export const Grid = ({ array, ketuaPosition }) => {
         className={clsx(
           array.anggota.length === 1
             ? "flex flex-warp w-full h-full pb-2 justify-center items-center"
-            : "grid grid-col-2 grid-rows-4 gap-3 border"
+            : "grid grid-col-2 grid-rows-4 gap-3"
         )}
       >
         {array?.anggota?.map((anggota, idx) => (
