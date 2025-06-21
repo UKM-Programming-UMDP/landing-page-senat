@@ -1,36 +1,42 @@
 import orang from "@assets/figure-jumbotron.png";
+import AppearZoomIn from "@common/Animation/AppearZoomIn";
 
 const Jumbotron = () => {
   return (
     <div className="h-screen overflow-hidden text-white bg-center bg-cover border-none jumbotron bg-dark-blue lg:px-5 lg:pt-16 pt-28">
       <div className="flex gap-2 ps-10 pe-10 items-center min-[1300px]:pt-28">
         <div className="flex flex-col gap-8 jumbotron-text lg:w-3/5">
-          <h1 className="w-full text-4xl font-extrabold text-center text-white md:text-5xl lg:text-left lg:text-6xl">
-            SENAT MAHASISWA UNIVERSITAS MDP
-          </h1>
-          <p className="text-lg text-justify lg:text-xl">
-            Senat Mahasiswa Universitas MDP merupakan suatu organisasi mahasiswa
-            yang menaungi Unit Kegiatan Mahasiswa (UKM) yang ada di lingkungan
-            Universitas MDP.
-          </p>
-
-          <div className="mx-auto lg:mx-0">
-            <a
-              className="w-full p-3 text-white rounded-full cursor-pointer btn"
-              style={{ backgroundColor: "#1f4287" }}
-              href="https://docs.google.com/forms/d/e/1FAIpQLSd1UfOyXQuY6JdEVT-3DHZQgTRoxiKEOEe9qWcru6NN0CuQqA/viewform?usp=sf_link"
-              target="_blank"
-            >
-              Form Sema Confess
-            </a>
-          </div>
+          <AppearZoomIn delay="0.6">
+            <>
+              <h1 className="w-full text-4xl font-extrabold text-center text-white md:text-5xl lg:text-left lg:text-6xl">
+                SENAT MAHASISWA UNIVERSITAS MDP
+              </h1>
+              <p className="text-lg text-justify lg:text-xl">
+                Senat Mahasiswa Universitas MDP merupakan suatu organisasi
+                mahasiswa yang menaungi Unit Kegiatan Mahasiswa (UKM) yang ada
+                di lingkungan Universitas MDP.
+              </p>
+              <div className="mx-auto my-10 lg:mx-0">
+                <a
+                  className="w-full p-3 text-white rounded-full cursor-pointer btn"
+                  style={{ backgroundColor: "#1f4287" }}
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSd1UfOyXQuY6JdEVT-3DHZQgTRoxiKEOEe9qWcru6NN0CuQqA/viewform?usp=sf_link"
+                  target="_blank"
+                >
+                  Form Sema Confess
+                </a>
+              </div>
+            </>
+          </AppearZoomIn>
         </div>
         <div className="relative aspect-[4/3] overflow-hidden lg:block md:hidden md:w-1/2 lg:w-3/5 sm:w-2/5">
-          <img
-            src={orang}
-            alt=""
-            className="absolute w-2/5 lg:w-[100%] lg:top-0 lg:right-0 lg:bottom-0"
-          />
+          <AppearZoomIn>
+            <img
+              src={orang}
+              alt=""
+              className="absolute w-2/5 lg:w-[100%] lg:top-0 lg:right-0 lg:bottom-0"
+            />
+          </AppearZoomIn>
         </div>
       </div>
       <div className="h-96"></div>
