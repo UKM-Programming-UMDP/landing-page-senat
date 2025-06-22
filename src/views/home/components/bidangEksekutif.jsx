@@ -44,7 +44,7 @@ const BidangEksekutif = () => {
   return (
     <div className="flex flex-col-reverse lg:flex-row mb-3 lg:p-32 px-10 lg:justify-between justify-center lg:items-start items-center gap-2">
       <div className="w-full lg:w-1/2">
-        <div className="hidden lg:flex flex-wrap gap-4 ">
+        <div className="hidden md:flex lg:flex flex-wrap gap-4 ">
           {dataEksekutif.map((item, index) => (
             <div key={index} className="w-[48%]">
               <CardEksekutif item={item} index={index} />
@@ -52,7 +52,7 @@ const BidangEksekutif = () => {
           ))}
         </div>
 
-        <div className="lg:hidden w-full flex justify-center">
+        <div className="lg:hidden md:hidden w-full flex justify-center">
           <Swiper
             effect="cards"
             grabCursor={true}
@@ -73,7 +73,7 @@ const BidangEksekutif = () => {
         </div>
       </div>
 
-      <div className="w-5/5 lg:w-1/2 mt-28 lg:mt-4">
+      <div className="w-4/5 lg:w-1/2 mt-28 lg:mt-4">
         <AppearZoomIn delay="0.3" className="w-full">
           <img src={img} alt="Keluarga Cemara" className="w-full rounded-xl" />
         </AppearZoomIn>
