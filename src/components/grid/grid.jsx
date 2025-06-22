@@ -70,60 +70,58 @@ export const Grid = ({ array, ketuaPosition }) => {
     const isSingle = array?.anggota?.length === 1;
 
     return (
-      <AppearZoomIn>
-        <div
-          className={clsx(
-            array.anggota.length === 1
-              ? "flex flex-warp w-full h-full pb-2 justify-center items-center"
-              : "grid grid-col-2 grid-rows-4 gap-3"
-          )}
-        >
-          {array?.anggota?.map((anggota, idx) => (
-            <div
-              key={anggota.name}
-              className={clsx(
-                isSingle ? "w-full h-full" : "w-full h-full row-span-4"
-              )}
-            >
-              <AppearZoomIn delay={0.3 + idx / 2}>
-                <div
-                  className={clsx(
-                    "text-xl font-semibold text-center bg-cover border-4 sm:border-8 sm:rounded-3xl rounded-xl bg-dark-blue border-dark-blue"
-                  )}
-                  style={{
-                    backgroundImage: `url(${anggota?.image})`,
-                    aspectRatio: isSingle ? "1 / 1" : "1 / 0.54",
-                  }}
-                  onClick={() => handleShowDetail(anggota.name)}
-                >
-                  {(clickedAnggota.includes(anggota.name) ||
-                    closingId === anggota.name) && (
-                    <div
-                      className={clsx(
-                        "p-4 text-center flex flex-col justify-center items-center bg-dark h-full w-full bg-gray-950/[.7] transition-opacity duration-300",
-                        closingId === anggota.name && "opacity-0"
-                      )}
+      <div
+        className={clsx(
+          array.anggota.length === 1
+            ? "flex flex-warp w-full h-full pb-2 justify-center items-center"
+            : "grid grid-col-2 grid-rows-4 gap-3"
+        )}
+      >
+        {array?.anggota?.map((anggota, idx) => (
+          <div
+            key={anggota.name}
+            className={clsx(
+              isSingle ? "w-full h-full" : "w-full h-full row-span-4"
+            )}
+          >
+            <AppearZoomIn delay={0.3 + idx / 2}>
+              <div
+                className={clsx(
+                  "text-xl font-semibold text-center bg-cover border-4 sm:border-8 sm:rounded-3xl rounded-xl bg-dark-blue border-dark-blue"
+                )}
+                style={{
+                  backgroundImage: `url(${anggota?.image})`,
+                  aspectRatio: isSingle ? "1 / 1" : "1 / 0.54",
+                }}
+                onClick={() => handleShowDetail(anggota.name)}
+              >
+                {(clickedAnggota.includes(anggota.name) ||
+                  closingId === anggota.name) && (
+                  <div
+                    className={clsx(
+                      "p-4 text-center flex flex-col justify-center items-center bg-dark h-full w-full bg-gray-950/[.7] transition-opacity duration-300",
+                      closingId === anggota.name && "opacity-0"
+                    )}
+                  >
+                    <p
+                      className="md:text-4xl text-l"
+                      style={{ WebkitTextStroke: "0.8px #000" }}
                     >
-                      <p
-                        className="md:text-4xl text-l"
-                        style={{ WebkitTextStroke: "0.8px #000" }}
-                      >
-                        {anggota.name}
-                      </p>
-                      <p
-                        className="text-base"
-                        style={{ WebkitTextStroke: "0.8px #000" }}
-                      >
-                        Anggota {anggota.divisi}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              </AppearZoomIn>
-            </div>
-          ))}
-        </div>
-      </AppearZoomIn>
+                      {anggota.name}
+                    </p>
+                    <p
+                      className="text-base"
+                      style={{ WebkitTextStroke: "0.8px #000" }}
+                    >
+                      Anggota {anggota.divisi}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </AppearZoomIn>
+          </div>
+        ))}
+      </div>
     );
   };
 
