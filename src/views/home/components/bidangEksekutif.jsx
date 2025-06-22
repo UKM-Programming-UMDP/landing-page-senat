@@ -42,7 +42,7 @@ const CardEksekutif = ({ item, index }) => {
 
 const BidangEksekutif = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row mt-1 mb-3 lg:p-32  p-10 justify-between items-start gap-2">
+    <div className="flex flex-col-reverse lg:flex-row mb-3 lg:p-32 px-10 justify-between items-start gap-2">
       <div className="w-full lg:w-1/2">
         <div className="hidden lg:flex flex-wrap gap-4 ">
           {dataEksekutif.map((item, index) => (
