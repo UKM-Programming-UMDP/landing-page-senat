@@ -15,7 +15,7 @@ const VisiMisi = () => {
       <AppearZoomIn delay={0.1}>
         <div className="p-5 pt-3 mx-8 border bg-dark-blue rounded-3xl">
           <h1 className="p-0 mb-2 text-2xl font-bold">VISI</h1>
-          <div className="text-[8px] md:text-sm lg:text-lg">
+          <div className="text-[9px] md:text-sm lg:text-lg">
             “Menciptakan serta menjadikan Senat mahasiswa sebagai lembaga yang
             interaktif kepada mahasiswa sehingga menjadi wadah untuk aspirasi,
             kolaborasi, belajar, berkembang dan berdinamika bagi seluruh
@@ -28,10 +28,10 @@ const VisiMisi = () => {
         <h1 className="mt-5 text-2xl font-bold text-dark-blue">MISI</h1>
       </AppearFadeLeft>
 
-      <div className="flex flex-col gap-1 px-4 mt-2 text-[8px] md:text-base md:px-9">
+      <div className="flex flex-col gap-1 px-4 mt-2 text-[9px] md:text-base md:px-9">
         {listMisi.map((misi, index) => (
           <AppearFadeLeft delay={index * 0.1} key={index}>
-            <div className="flex items-center gap-3 text-[8px] md:gap-7 md:text-sm lg:text-lg">
+            <div className="flex items-center gap-3 text-[9px] md:gap-7 md:text-sm lg:text-lg">
               <div className="md:flex">
                 <span className="flex items-center justify-center w-10 h-10 text-[8px] text-white rounded-full lg:w-16 lg:h-16 bg-dark-blue md:w-18 md:h-18 md:text-sm lg:text-lg">
                   {index + 1}
