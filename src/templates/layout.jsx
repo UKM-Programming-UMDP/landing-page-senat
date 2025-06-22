@@ -1,12 +1,34 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { Navbar } from "@components/navbar";
 import { Footer } from "@components/footer";
+import Fullpage, {
+  FullPageSections,
+  FullpageSection,
+} from "@ap.cx/react-fullpage";
+
 export const Layout = () => {
+  const location = useLocation();
+
+  const isFullpageRoute = ["/", "/about"].includes(location.pathname);
+
   return (
-    <div className="overflow-x-hidden w-full">
+    <div className="relative w-full h-full">
       <Navbar />
-      <Outlet />
-      <Footer />
+      {isFullpageRoute ? (
+        <Fullpage>
+          <FullPageSections>
+            <Outlet />
+            <FullpageSection data-section="99">
+              <Footer />
+            </FullpageSection>
+          </FullPageSections>
+        </Fullpage>
+      ) : (
+        <div className="content">
+          <Outlet />
+          <Footer />
+        </div>
+      )}
     </div>
   );
 };

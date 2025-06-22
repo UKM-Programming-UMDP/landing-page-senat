@@ -1,58 +1,51 @@
 import orang from "@assets/figure-jumbotron.png";
+import AppearZoomIn from "@common/Animation/AppearZoomIn";
+import { Link } from "react-router-dom";
 
-export const Jumbotron = () => {
+const Jumbotron = () => {
   return (
-    <div
-      className="jumbotron overflow-hidden border-none text-white bg-dark-blue bg-cover bg-center lg:px-5 lg:pt-16 pt-28 h-max "
-      data-aos="zoom-out"
-      data-aos-duration="500"
-    >
+    <div className="h-screen overflow-hidden text-white bg-center bg-cover border-none jumbotron bg-dark-blue lg:px-5 lg:pt-16 pt-28">
       <div className="flex gap-2 ps-10 pe-10 items-center min-[1300px]:pt-28">
-        <div
-          className="jumbotron-text lg:w-3/5 flex flex-col gap-8"
-          data-aos="fade-left"
-          data-aos-duration="900"
-        >
-          <h1 className="text-4xl font-extrabold w-full text-center md:text-5xl lg:text-left text-white lg:text-6xl">
-            SENAT MAHASISWA UNIVERSITAS MDP
-          </h1>
-          <p className="text-lg lg:text-xl text-justify">
-            Senat Mahasiswa Universitas MDP merupakan suatu organisasi mahasiswa
-            yang menaungi Unit Kegiatan Mahasiswa (UKM) yang ada di lingkungan
-            Universitas MDP.
-          </p>
-
-          <div className="mx-auto lg:mx-0">
-            <a
-              className="btn w-full rounded-full text-white p-3 cursor-pointer"
-              style={{ backgroundColor: "#1f4287" }}
-              href="https://docs.google.com/forms/d/e/1FAIpQLSd1UfOyXQuY6JdEVT-3DHZQgTRoxiKEOEe9qWcru6NN0CuQqA/viewform?usp=sf_link"
-              target="_blank"
-            >
-              Form Sema Confess
-            </a>
-          </div>
+        <div className="flex flex-col gap-8 jumbotron-text lg:w-3/5">
+          <AppearZoomIn delay="0.6" className="flex flex-col w-full">
+            <>
+              <h1 className="w-full text-4xl font-extrabold text-center text-white md:text-5xl lg:text-left lg:text-6xl">
+                SENAT MAHASISWA UNIVERSITAS MDP
+              </h1>
+              <p className="text-lg text-justify lg:text-xl">
+                Senat Mahasiswa Universitas MDP merupakan suatu organisasi
+                mahasiswa yang menaungi Unit Kegiatan Mahasiswa (UKM) yang ada
+                di lingkungan Universitas MDP.
+              </p>
+              <div className="z-10 mx-auto my-10 lg:mx-0">
+                <Link
+                  className="w-full p-3 text-white rounded-full cursor-pointer btn"
+                  style={{ backgroundColor: "#1f4287" }}
+                  to="/contact/form-aspirasi"
+                  target="_blank"
+                >
+                  Form Sema Confess
+                </Link>
+              </div>
+            </>
+          </AppearZoomIn>
         </div>
-        <div
-          className="hidden lg:block lg:w-3/5 sm:w-2/5"
-          style={{ zIndex: -1 }}
-        >
-          <img
-            src={orang}
-            alt=""
-            className="absolute lg:w-1/2 w-2/5 lg:top-36 lg:right-10"
-            data-aos="zoom-out"
-            data-aos-duration="800"
-          />
+        <div className="relative aspect-[4/3] overflow-hidden lg:block hidden md:w-1/2 lg:w-3/5 sm:w-2/5">
+          <AppearZoomIn>
+            <img
+              src={orang}
+              alt=""
+              className="absolute w-2/5 lg:w-[100%] lg:top-0 lg:right-0 lg:bottom-0"
+            />
+          </AppearZoomIn>
         </div>
       </div>
       <div className="h-96"></div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        preserveAspectRatio="none"
-        className="absolute bottom-0 left-0 w-full"
-        style={{ bottom: "-10px" }}
+        className="absolute w-full left-0 
+             top-[17.7%] sm:top-[18%] md:top-[15%] lg:top-[13%]"
       >
         <path
           fill="#ffff"
@@ -63,3 +56,4 @@ export const Jumbotron = () => {
     </div>
   );
 };
+export default Jumbotron;
