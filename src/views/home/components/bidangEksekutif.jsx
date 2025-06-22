@@ -42,11 +42,11 @@ const CardEksekutif = ({ item, index }) => {
 
 const BidangEksekutif = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row mb-3 lg:p-32 px-10 justify-between items-start gap-2">
+    <div className="flex flex-col-reverse lg:flex-row mb-3 lg:p-32 px-10 lg:justify-between justify-center lg:items-start items-center gap-2">
       <div className="w-full lg:w-1/2">
         <div className="hidden lg:flex flex-wrap gap-4 ">
           {dataEksekutif.map((item, index) => (
-            <div key={index} className="w-[48%] border">
+            <div key={index} className="w-[48%]">
               <CardEksekutif item={item} index={index} />
             </div>
           ))}
@@ -73,8 +73,8 @@ const BidangEksekutif = () => {
         </div>
       </div>
 
-      <div className="w-full lg:w-1/2 mt-4 mb-4 px-4">
-        <AppearZoomIn delay="0.3">
+      <div className="w-5/5 lg:w-1/2 mt-28 lg:mt-4">
+        <AppearZoomIn delay="0.3" className="w-full">
           <img src={img} alt="Keluarga Cemara" className="w-full rounded-xl" />
         </AppearZoomIn>
       </div>
