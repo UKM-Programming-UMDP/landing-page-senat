@@ -1,61 +1,85 @@
 import img from "@assets/foto-senat-2024.png";
 import { dataEksekutif } from "@content/home/dataEksekutif";
 import AppearZoomIn from "@common/Animation/AppearZoomIn";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper/modules";
+
+const CardEksekutif = ({ item, index }) => {
+  const isDark = index % 3 === 0;
+
+  return (
+    <AppearZoomIn delay={index * 0.2}>
+      <div
+        className={`card-eksekutif
+          ${
+            isDark
+              ? "lg:bg-[#071e3d] lg:text-white bg-white text-black"
+              : "bg-white text-black"
+          }
+          border-bidang-eksekutif p-4 shadow-lg w-full h-[270px] rounded-lg transition-all`}
+      >
+        <div className="flex flex-col items-center h-full">
+          <div
+            className={`${
+              isDark ? "bg-[#071e3d] lg:bg-white" : "bg-[#071e3d]"
+            } p-3 rounded-full`}
+          >
+            <img
+              src={item.icon}
+              alt="icon"
+              className={`w-10 ${isDark ? "lg:filter lg:invert" : ""}`}
+            />
+          </div>
+          <h5 className="mt-3 mb-2 text-xl font-semibold text-center">
+            {item.name}
+          </h5>
+          <p className="text-sm text-justify">{item.descriptions}</p>
+        </div>
+      </div>
+    </AppearZoomIn>
+  );
+};
 
 const BidangEksekutif = () => {
   return (
-    <div className="h-full overflow-x-hidden lg:me-10 lg:h-auto lg:ms-10 me-3 ms-3">
-      <div className="mt-24 ">
-        <AppearZoomIn delay="0.3">
-          <h1 className="text-3xl font-bold text-center">BIDANG EKSEKUTIF</h1>
-        </AppearZoomIn>
-      </div>
-
-      <div className="flex flex-col-reverse min-[1300px]:flex-row mt-1 mb-3 justify-center items-center">
-        <div className="flex flex-wrap justify-center items-center gap-4 min-[1300px]:w-1/2 min-[1420px]:w-50 mt-4 mb-4 xl:p-0 sm:p-24 p-6">
+    <div className="flex flex-col-reverse lg:flex-row mt-1 mb-3 lg:p-32  p-10 justify-between items-start gap-2">
+      <div className="w-full lg:w-1/2">
+        <div className="hidden lg:flex flex-wrap gap-4 ">
           {dataEksekutif.map((item, index) => (
-            <AppearZoomIn key={index} delay={index * 0.2}>
-              <div
-                key={index}
-                className={`card-eksekutif text-black ${
-                  index % 3 === 0
-                    ? "bg-dark-blue text-white lg:bg-dark-blue lg:text-white"
-                    : "text-black"
-                } border-bidang-eksekutif p-4 shadow-lg w-full min-[1300px]:w-60 leading-8 tracking-normal h-full`}
-              >
-                <div className="flex flex-col items-center h-full">
-                  <div
-                    className={`${
-                      index % 3 === 0 ? "bg-white" : "bg-dark-blue"
-                    } p-3 rounded-full h-full `}
-                  >
-                    <img
-                      src={item.icon}
-                      alt="icon"
-                      className={`w-10 h-full ${
-                        index % 3 === 0 ? "filter-dark-blue" : ""
-                      }`}
-                    />
-                  </div>
-                  <h5 className="mt-3 mb-3 text-xl font-semibold">
-                    {item.name}
-                  </h5>
-                  <p className="mt-1 text-sm text-justify">
-                    {item.descriptions}
-                  </p>
-                </div>
-              </div>
-            </AppearZoomIn>
+            <div key={index} className="w-[48%] border">
+              <CardEksekutif item={item} index={index} />
+            </div>
           ))}
         </div>
 
-        <div className="w-2/3 mt-4 mb-4 lg:w-2/5">
-          <AppearZoomIn delay="0.3">
-            <img src={img} alt="Keluarga Cemara" className="w-full" />
-          </AppearZoomIn>
+        <div className="lg:hidden w-full flex justify-center">
+          <Swiper
+            effect="cards"
+            grabCursor={true}
+            slidesPerView={1}
+            modules={[EffectCards]}
+            cardsEffect={{ slideShadows: false, perSlideOffset: 10 }}
+            className="w-full max-w-xs h-[400px]"
+          >
+            {dataEksekutif.map((item, index) => (
+              <SwiperSlide
+                key={index}
+                className="flex items-center justify-center"
+              >
+                <CardEksekutif item={item} index={index} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
+      </div>
+
+      <div className="w-full lg:w-1/2 mt-4 mb-4 px-4">
+        <AppearZoomIn delay="0.3">
+          <img src={img} alt="Keluarga Cemara" className="w-full rounded-xl" />
+        </AppearZoomIn>
       </div>
     </div>
   );
 };
+
 export default BidangEksekutif;

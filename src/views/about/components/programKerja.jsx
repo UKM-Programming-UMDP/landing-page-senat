@@ -1,15 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, Navigation, Pagination } from "swiper/modules";
+import { EffectCards } from "swiper/modules";
 import icon1 from "@assets/promote.png";
 import icon2 from "@assets/school.png";
 import icon3 from "@assets/competition.png";
 import icon4 from "@assets/student.png";
 import img1 from "@assets/figure-UKM.png";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/css/effect-coverflow";
 import AppearZoomIn from "@common/Animation/AppearZoomIn";
 import AppearFadeIn from "@common/Animation/AppearFadeIn";
 

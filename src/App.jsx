@@ -1,11 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
 import { Layout } from "./templates/layout";
 import { Home } from "./views/home";
 import { ErrorPage } from "./views/ErorrPage";
 import { About } from "./views/about";
 import { Sosmed } from "./views/contact/medsos/medsos";
 import { FormAspirasi } from "./views/contact/formAspirasi/formAspirasi";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/effect-coverflow";
+import "swiper/css/effect-cards";
+import "./App.css";
 
 function App() {
   return (
